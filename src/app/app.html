@@ -1,0 +1,579 @@
+<!-- Navigation -->
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container navbar-container">
+    <a href="#" class="logo">
+      <span class="logo-icon">🌿</span>
+      <span class="logo-text">Piox <span class="logo-accent">Natural</span></span>
+    </a>
+    
+    <ul class="nav-links" [class.active]="menuOpen">
+      <li><a href="#home" (click)="closeMenu()">Inicio</a></li>
+      <li><a href="#services" (click)="closeMenu()">Servicios</a></li>
+      <li><a href="#about" (click)="closeMenu()">Nosotros</a></li>
+      <li><a href="#products" (click)="closeMenu()">Productos</a></li>
+      <li><a href="#contact" (click)="closeMenu()">Contacto</a></li>
+    </ul>
+    
+    <a href="tel:+16174121886" class="nav-cta btn btn-primary">Llamar Ahora</a>
+    
+    <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <div class="hero-pattern"></div>
+    <div class="hero-gradient"></div>
+  </div>
+  
+  <div class="container hero-content">
+    <div class="hero-text">
+      <span class="hero-badge">🌸 100% Natural & Artesanal</span>
+      <h1 class="hero-title">
+        Limpieza Natural
+        <span class="title-accent">desde Antigua</span>
+        hasta Boston
+      </h1>
+      <p class="hero-subtitle">
+        Transformamos tu hogar en un santuario de pureza con productos naturales 
+        elaborados artesanalmente, inspirados en la sabiduría ancestral Maya.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Solicitar Cotización</a>
+        <a href="#services" class="btn btn-outline">Ver Servicios</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Natural</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Clientes Felices</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5★</span>
+          <span class="stat-label">Calificación</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-visual">
+      <div class="hero-image-container">
+        <div class="floating-elements">
+          <div class="float-item lavender">💜</div>
+          <div class="float-item leaf">🌿</div>
+          <div class="float-item citrus">🍋</div>
+          <div class="float-item flower">🌸</div>
+        </div>
+        <div class="hero-card">
+          <div class="card-icon">✨</div>
+          <h3>Limpieza Ecológica</h3>
+          <p>Sin químicos tóxicos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <span>Descubre más</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- Features Banner -->
+<section class="features-banner">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item">
+        <span class="feature-icon">🌱</span>
+        <span class="feature-text">Productos Orgánicos</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🏠</span>
+        <span class="feature-text">Limpieza Residencial</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🧺</span>
+        <span class="feature-text">Servicio de Lavandería</span>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">💚</span>
+        <span class="feature-text">Eco-Friendly</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-tag">Nuestros Servicios</span>
+      <h2 class="section-title">Cuidamos tu Hogar <br><span class="text-lavender">Naturalmente</span></h2>
+      <p class="section-subtitle">
+        Ofrecemos servicios de limpieza profesional utilizando exclusivamente 
+        productos naturales que cuidan tu salud y el medio ambiente.
+      </p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <span>🏡</span>
+        </div>
+        <h3>Limpieza Residencial</h3>
+        <p>Limpieza profunda de hogares con productos 100% naturales que eliminan gérmenes sin dejar residuos tóxicos.</p>
+        <ul class="service-features">
+          <li>Limpieza regular semanal</li>
+          <li>Limpieza profunda mensual</li>
+          <li>Desinfección natural</li>
+        </ul>
+        <span class="service-price">Desde $120</span>
+      </div>
+      
+      <div class="service-card featured">
+        <div class="featured-badge">Más Popular</div>
+        <div class="service-icon">
+          <span>✨</span>
+        </div>
+        <h3>Limpieza Profunda</h3>
+        <p>Servicio completo para mudanzas, post-construcción o limpieza exhaustiva de primavera.</p>
+        <ul class="service-features">
+          <li>Limpieza de move-in/move-out</li>
+          <li>Post-construcción</li>
+          <li>Limpieza de alfombras</li>
+        </ul>
+        <span class="service-price">Desde $250</span>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <span>🧺</span>
+        </div>
+        <h3>Lavandería Natural</h3>
+        <p>Cuidamos tus prendas con jabones naturales y opciones de aromaterapia con lavanda.</p>
+        <ul class="service-features">
+          <li>Lavado con productos naturales</li>
+          <li>Aromaterapia incluida</li>
+          <li>Cuidado de telas delicadas</li>
+        </ul>
+        <span class="service-price">Desde $1.50/lb</span>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <span>🏢</span>
+        </div>
+        <h3>Limpieza Comercial</h3>
+        <p>Mantenemos espacios de trabajo limpios y saludables para tu equipo y clientes.</p>
+        <ul class="service-features">
+          <li>Oficinas y consultorios</li>
+          <li>Estudios de wellness</li>
+          <li>Contratos mensuales</li>
+        </ul>
+        <span class="service-price">Cotización</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-image-frame">
+          <div class="frame-decoration top-left"></div>
+          <div class="frame-decoration bottom-right"></div>
+          <div class="about-image">
+            <div class="image-overlay"></div>
+            <div class="founder-info">
+              <span class="founder-name">Olga Piox</span>
+              <span class="founder-title">Fundadora</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-badge">
+          <span class="badge-icon">🌺</span>
+          <span class="badge-text">Tradición Maya</span>
+        </div>
+      </div>
+      
+      <div class="about-content">
+        <span class="section-tag">Nuestra Historia</span>
+        <h2 class="section-title">De Antigua, Guatemala <br>a <span class="text-lavender">Boston</span></h2>
+        <div class="about-text">
+          <p>
+            Mi nombre es <strong>Olga Piox</strong>. Lavender & Piox Natural Cleaning nació 
+            después de múltiples visitas a emergencias donde descubrí que sufría reacciones 
+            alérgicas severas por años de usar químicos agresivos para limpiar.
+          </p>
+          <p>
+            Era tiempo de terminar con las dolorosas erupciones en la piel y reclamar la 
+            sabiduría de mis ancestros Mayas Indígenas que dependían de los regalos de la 
+            Madre Naturaleza.
+          </p>
+          <p>
+            Comencé a reemplazar agentes de limpieza estándar con recetas de limpieza 
+            orgánica y fórmulas desinfectantes que me fueron transmitidas por mi cultura. 
+            Mis clientes aman la sensación de frescura y los aromas saludables que llenan 
+            sus hogares.
+          </p>
+        </div>
+        
+        <div class="values-grid">
+          <div class="value-item">
+            <span class="value-icon">🌿</span>
+            <span class="value-text">Sostenibilidad</span>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">💜</span>
+            <span class="value-text">Autenticidad Cultural</span>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">❤️</span>
+            <span class="value-text">Bienestar</span>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">🤝</span>
+            <span class="value-text">Transparencia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-tag">Ingredientes Naturales</span>
+      <h2 class="section-title">El Poder de la <span class="text-gold">Naturaleza</span></h2>
+      <p class="section-subtitle">
+        Utilizamos ingredientes puros y naturales, muchos de ellos importados 
+        directamente de cooperativas en Antigua, Guatemala.
+      </p>
+    </div>
+    
+    <div class="products-showcase">
+      <div class="product-item">
+        <div class="product-visual lavender-visual">
+          <span class="product-emoji">💜</span>
+        </div>
+        <h4>Lavanda</h4>
+        <p>Relajante y antibacterial natural</p>
+      </div>
+      
+      <div class="product-item">
+        <div class="product-visual citrus-visual">
+          <span class="product-emoji">🍋</span>
+        </div>
+        <h4>Cítricos</h4>
+        <p>Desengrasante y aromatizante</p>
+      </div>
+      
+      <div class="product-item">
+        <div class="product-visual vinegar-visual">
+          <span class="product-emoji">🫗</span>
+        </div>
+        <h4>Vinagre</h4>
+        <p>Desinfectante y removedor de manchas</p>
+      </div>
+      
+      <div class="product-item">
+        <div class="product-visual baking-visual">
+          <span class="product-emoji">🧂</span>
+        </div>
+        <h4>Bicarbonato</h4>
+        <p>Limpiador multiusos suave</p>
+      </div>
+      
+      <div class="product-item">
+        <div class="product-visual flower-visual">
+          <span class="product-emoji">🌺</span>
+        </div>
+        <h4>Flor de Izote</h4>
+        <p>Tradición guatemalteca</p>
+      </div>
+    </div>
+    
+    <div class="eco-commitment">
+      <div class="eco-card">
+        <div class="eco-icon">♻️</div>
+        <div class="eco-content">
+          <h3>Compromiso Ecológico</h3>
+          <p>Utilizamos empaques biodegradables, recargables y trabajamos con pequeños productores en Guatemala para garantizar prácticas sostenibles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-tag">Testimonios</span>
+      <h2 class="section-title">Lo que Dicen <span class="text-lavender">Nuestros Clientes</span></h2>
+    </div>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "Desde que Piox Natural comenzó a limpiar mi casa, mis alergias han mejorado 
+          increíblemente. El aroma a lavanda es divino y saber que no hay químicos 
+          tóxicos me da mucha paz."
+        </p>
+        <div class="testimonial-author">
+          <span class="author-name">María González</span>
+          <span class="author-location">Cambridge, MA</span>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "Como madre de dos niños pequeños, siempre me preocuparon los productos de 
+          limpieza. Olga y su equipo usan productos que son seguros y efectivos. 
+          ¡Altamente recomendados!"
+        </p>
+        <div class="testimonial-author">
+          <span class="author-name">Jennifer Smith</span>
+          <span class="author-location">Boston, MA</span>
+        </div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">
+          "El servicio de lavandería con aromaterapia es increíble. Mi ropa nunca 
+          ha olido tan bien y es reconfortante saber que es todo natural."
+        </p>
+        <div class="testimonial-author">
+          <span class="author-name">Carlos Méndez</span>
+          <span class="author-location">Somerville, MA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-tag">Membresías</span>
+      <h2 class="section-title">Planes <span class="text-gold">Mensuales</span></h2>
+      <p class="section-subtitle">
+        Ahorra con nuestros planes de membresía y mantén tu hogar siempre impecable.
+      </p>
+    </div>
+    
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3 class="plan-name">Esencial</h3>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">400</span>
+          <span class="period">/mes</span>
+        </div>
+        <ul class="plan-features">
+          <li>✓ 2 limpiezas mensuales</li>
+          <li>✓ Productos 100% naturales</li>
+          <li>✓ Hasta 1,500 sq ft</li>
+          <li>✓ Aromaterapia básica</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Elegir Plan</a>
+      </div>
+      
+      <div class="pricing-card featured">
+        <div class="plan-badge">Recomendado</div>
+        <h3 class="plan-name">Premium</h3>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">650</span>
+          <span class="period">/mes</span>
+        </div>
+        <ul class="plan-features">
+          <li>✓ 4 limpiezas mensuales</li>
+          <li>✓ Productos premium</li>
+          <li>✓ Hasta 2,500 sq ft</li>
+          <li>✓ Aromaterapia completa</li>
+          <li>✓ Lavandería incluida</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Elegir Plan</a>
+      </div>
+      
+      <div class="pricing-card">
+        <h3 class="plan-name">Empresarial</h3>
+        <div class="plan-price">
+          <span class="currency">$</span>
+          <span class="amount">Cotizar</span>
+        </div>
+        <ul class="plan-features">
+          <li>✓ Servicio personalizado</li>
+          <li>✓ Múltiples ubicaciones</li>
+          <li>✓ Horario flexible</li>
+          <li>✓ Productos especializados</li>
+          <li>✓ Facturación corporativa</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Contactar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">Contáctanos</span>
+        <h2 class="section-title">Comienza tu Camino <br>hacia un Hogar <span class="text-lavender">Más Natural</span></h2>
+        <p class="contact-description">
+          Estamos aquí para responder tus preguntas y crear un plan de limpieza 
+          personalizado para tu hogar o negocio.
+        </p>
+        
+        <div class="contact-methods">
+          <a href="tel:+16174121886" class="contact-method">
+            <span class="method-icon">📱</span>
+            <div class="method-details">
+              <span class="method-label">Teléfono / WhatsApp</span>
+              <span class="method-value">+1 (617) 412-1886</span>
+            </div>
+          </a>
+          
+          <a href="mailto:info@pioxnatural.com" class="contact-method">
+            <span class="method-icon">✉️</span>
+            <div class="method-details">
+              <span class="method-label">Email</span>
+              <span class="method-value">info@pioxnatural.com</span>
+            </div>
+          </a>
+          
+          <div class="contact-method">
+            <span class="method-icon">📍</span>
+            <div class="method-details">
+              <span class="method-label">Ubicación</span>
+              <span class="method-value">Boston, Massachusetts</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-form-wrapper">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="phone" placeholder="(617) 000-0000">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="service">Servicio de Interés</label>
+            <select id="service" name="service">
+              <option value="">Seleccionar servicio...</option>
+              <option value="residential">Limpieza Residencial</option>
+              <option value="deep">Limpieza Profunda</option>
+              <option value="laundry">Lavandería Natural</option>
+              <option value="commercial">Limpieza Comercial</option>
+              <option value="membership">Membresía Mensual</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" placeholder="Cuéntanos sobre tu espacio y necesidades..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-full">Enviar Solicitud</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">Piox <span class="logo-accent">Natural</span></span>
+        </a>
+        <p class="footer-tagline">Nature's Touch from Antigua to Boston</p>
+        <p class="footer-slogan">Cleaning Earth One Home at a Time!</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#services">Limpieza Residencial</a></li>
+            <li><a href="#services">Limpieza Profunda</a></li>
+            <li><a href="#services">Lavandería Natural</a></li>
+            <li><a href="#services">Limpieza Comercial</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#about">Nuestra Historia</a></li>
+            <li><a href="#products">Ingredientes</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="tel:+16174121886">+1 (617) 412-1886</a></li>
+            <li><a href="mailto:info@pioxnatural.com">info@pioxnatural.com</a></li>
+            <li>Boston, MA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Piox Natural Cleaning & Laundry Services. Todos los derechos reservados.</p>
+      <p class="footer-certifications">
+        <span>🌱 Eco-Friendly</span>
+        <span>💼 Asegurado</span>
+        <span>✓ Minority-Owned Business</span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<router-outlet />
