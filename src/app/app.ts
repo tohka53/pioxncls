@@ -195,7 +195,7 @@ export class App {
   title = 'Piox Natural Cleaning';
   isScrolled = false;
   menuOpen = false;
-  currentLang: Language = 'es';
+  currentLang: Language = 'en';
 
   translations: Record<Language, Translations> = {
     es: {
