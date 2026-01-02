@@ -1162,3 +1162,207 @@
     }
   }
 }
+// ===================================
+// LANGUAGE TOGGLE BUTTON STYLES
+// Add these styles to your existing app.scss
+// ===================================
+
+// Language Toggle Button
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: transparent;
+  border: 2px solid var(--color-lavender, #9b7bb8);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  
+  &:hover {
+    background: var(--color-lavender, #9b7bb8);
+    transform: translateY(-2px);
+    
+    .lang-text {
+      color: white;
+    }
+  }
+  
+  .lang-flag {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  
+  .lang-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-lavender, #9b7bb8);
+    transition: color 0.3s ease;
+  }
+}
+
+// Nav Actions Container
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  
+  @media (max-width: 768px) {
+    .nav-cta {
+      display: none;
+    }
+  }
+}
+
+// Mobile adjustments
+@media (max-width: 992px) {
+  .lang-toggle {
+    position: absolute;
+    top: 20px;
+    right: 70px; // Position next to hamburger menu
+    
+    .lang-text {
+      display: none; // Only show flag on mobile
+    }
+  }
+}
+
+// ===================================
+// ALTERNATIVE STYLES (choose one)
+// ===================================
+
+// Option 2: Pill-style toggle
+.lang-toggle--pill {
+  position: relative;
+  display: flex;
+  background: #f0f0f0;
+  border-radius: 25px;
+  padding: 4px;
+  border: none;
+  
+  .lang-option {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+    &.active {
+      background: var(--color-lavender, #9b7bb8);
+      color: white;
+    }
+  }
+}
+
+// Option 3: Dropdown style
+.lang-dropdown {
+  position: relative;
+  
+  .lang-current {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    
+    &::after {
+      content: '▼';
+      font-size: 0.7rem;
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  .lang-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-top: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .lang-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      
+      &:hover {
+        background: #f5f5f5;
+      }
+      
+      &:first-child {
+        border-radius: 6px 6px 0 0;
+      }
+      
+      &:last-child {
+        border-radius: 0 0 6px 6px;
+      }
+    }
+  }
+  
+  &.open .lang-current::after {
+    transform: rotate(180deg);
+  }
+}
+
+// ===================================
+// ANIMATION FOR LANGUAGE CHANGE
+// ===================================
+
+// Fade transition when language changes
+.fade-transition {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// ===================================
+// DARK MODE SUPPORT (optional)
+// ===================================
+
+@media (prefers-color-scheme: dark) {
+  .lang-toggle {
+    border-color: #c4a9d9;
+    
+    .lang-text {
+      color: #c4a9d9;
+    }
+    
+    &:hover {
+      background: #c4a9d9;
+      
+      .lang-text {
+        color: #1a1a1a;
+      }
+    }
+  }
+}
