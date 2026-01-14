@@ -404,8 +404,8 @@ export class App {
       hero: {
         badge: '🌸 100% Natural & Handcrafted',
         title1: 'Natural Cleaning',
-        titleAccent: 'from Antigua Guatemala',
-        title2: 'to Boston',
+        titleAccent: 'and Laundry Service',
+        title2: 'On Boston',
         subtitle: 'We transform your home into a sanctuary of purity with handcrafted natural products, inspired by ancestral Mayan wisdom.',
         cta1: 'Request Quote',
         cta2: 'View Services',
