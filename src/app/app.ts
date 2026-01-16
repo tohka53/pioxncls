@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 type Language = 'es' | 'en';
+type ServiceKey = 'residential' | 'laundry' | 'deep' | 'commercial';
 
 interface Translations {
   nav: {
@@ -46,7 +47,7 @@ interface Translations {
       price: string;
     };
     deep: {
-      badge: string;
+      badge?: string; // ✅ opcional
       title: string;
       description: string;
       feature1: string;
@@ -55,6 +56,7 @@ interface Translations {
       price: string;
     };
     laundry: {
+      badge?: string; // ✅ opcional
       title: string;
       description: string;
       feature1: string;
@@ -189,13 +191,16 @@ interface Translations {
   selector: 'app-root',
   templateUrl: './app.html',
   standalone: false,
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss'] // ✅ styleUrls
 })
-export class App {
+export class App implements OnInit {
   title = 'Piox Natural Cleaning';
   isScrolled = false;
   menuOpen = false;
   currentLang: Language = 'en';
+
+  // ✅ Orden de cards (Laundry primero y Featured)
+  serviceOrder: ServiceKey[] = ['laundry', 'residential', 'deep', 'commercial'];
 
   translations: Record<Language, Translations> = {
     es: {
@@ -212,7 +217,8 @@ export class App {
         title1: 'Servicio de limpieza',
         titleAccent: 'y lavandería natural',
         title2: 'en Boston y alrededores',
-        subtitle: 'Transformamos tu hogar en un santuario de pureza con productos naturales elaborados artesanalmente, inspirados en la sabiduría ancestral Maya.',
+        subtitle:
+          'Transformamos tu hogar en un santuario de pureza con productos naturales elaborados artesanalmente, inspirados en la sabiduría ancestral Maya.',
         cta1: 'Solicitar Cotización',
         cta2: 'Ver Servicios',
         stat1Label: 'Natural',
@@ -232,27 +238,33 @@ export class App {
         tag: 'Nuestros Servicios',
         title1: 'Cuidamos tu Hogar',
         title2: 'Naturalmente',
-        subtitle: 'Ofrecemos servicios de limpieza profesional utilizando exclusivamente productos naturales que cuidan tu salud y el medio ambiente.',
+        subtitle:
+          'Ofrecemos servicios de limpieza profesional utilizando exclusivamente productos naturales que cuidan tu salud y el medio ambiente.',
         residential: {
           title: 'Limpieza Residencial',
-          description: 'Limpieza profunda de hogares con productos 100% naturales que eliminan gérmenes sin dejar residuos tóxicos.',
+          description:
+            'Limpieza profunda de hogares con productos 100% naturales que eliminan gérmenes sin dejar residuos tóxicos.',
           feature1: 'Limpieza regular semanal',
           feature2: 'Limpieza profunda mensual',
           feature3: 'Desinfección natural',
           price: 'Desde $120'
         },
         deep: {
-          badge: 'Más Popular',
+          // ❌ ya NO es el “más popular” (lo movimos a Laundry)
           title: 'Limpieza Profunda',
-          description: 'Servicio completo para mudanzas, post-construcción o limpieza exhaustiva de primavera.',
+          description:
+            'Servicio completo para mudanzas, post-construcción o limpieza exhaustiva de primavera.',
           feature1: 'Limpieza de move-in/move-out',
           feature2: 'Post-construcción',
           feature3: 'Limpieza de alfombras',
           price: 'Desde $250'
         },
         laundry: {
+          // ✅ Laundry ES EL MÁS POPULAR
+          badge: 'Más Popular',
           title: 'Lavandería Natural',
-          description: 'Cuidamos tus prendas con jabones naturales y opciones de aromaterapia con lavanda.',
+          description:
+            'Cuidamos tus prendas con jabones naturales y aromaterapia con lavanda.',
           feature1: 'Lavado con productos naturales',
           feature2: 'Aromaterapia incluida',
           feature3: 'Cuidado de telas delicadas',
@@ -260,7 +272,8 @@ export class App {
         },
         commercial: {
           title: 'Limpieza Comercial',
-          description: 'Mantenemos espacios de trabajo limpios y saludables para tu equipo y clientes.',
+          description:
+            'Mantenemos espacios de trabajo limpios y saludables para tu equipo y clientes.',
           feature1: 'Oficinas y consultorios',
           feature2: 'Estudios de wellness',
           feature3: 'Contratos mensuales',
@@ -274,9 +287,12 @@ export class App {
         founderName: 'Olga Piox',
         founderTitle: 'Fundadora',
         badge: 'Tradición Maya',
-        text1: 'Mi nombre es <strong>Olga Piox</strong>. Lavender & Piox Natural Cleaning nació después de múltiples visitas a emergencias donde descubrí que sufría reacciones alérgicas severas por años de usar químicos agresivos para limpiar.',
-        text2: 'Era tiempo de terminar con las dolorosas erupciones en la piel y reclamar la sabiduría de mis ancestros Mayas Indígenas que dependían de los regalos de la Madre Naturaleza.',
-        text3: 'Comencé a reemplazar agentes de limpieza estándar con recetas de limpieza orgánica y fórmulas desinfectantes que me fueron transmitidas por mi cultura. Mis clientes aman la sensación de frescura y los aromas saludables que llenan sus hogares.',
+        text1:
+          'Mi nombre es <strong>Olga Piox</strong>. Lavender & Piox Natural Cleaning nació después de múltiples visitas a emergencias donde descubrí que sufría reacciones alérgicas severas por años de usar químicos agresivos para limpiar.',
+        text2:
+          'Era tiempo de terminar con las dolorosas erupciones en la piel y reclamar la sabiduría de mis ancestros Mayas Indígenas que dependían de los regalos de la Madre Naturaleza.',
+        text3:
+          'Comencé a reemplazar agentes de limpieza estándar con recetas de limpieza orgánica y fórmulas desinfectantes que me fueron transmitidas por mi cultura. Mis clientes aman la sensación de frescura y los aromas saludables que llenan sus hogares.',
         value1: 'Sostenibilidad',
         value2: 'Autenticidad Cultural',
         value3: 'Bienestar',
@@ -286,31 +302,36 @@ export class App {
         tag: 'Ingredientes Naturales',
         title1: 'El Poder de la',
         title2: 'Naturaleza',
-        subtitle: 'Utilizamos ingredientes puros y naturales, muchos de ellos importados directamente de cooperativas en Antigua, Guatemala.',
+        subtitle:
+          'Utilizamos ingredientes puros y naturales, muchos de ellos importados directamente de cooperativas en Antigua, Guatemala.',
         lavender: { name: 'Lavanda', desc: 'Relajante y antibacterial natural' },
         citrus: { name: 'Cítricos', desc: 'Desengrasante y aromatizante' },
         vinegar: { name: 'Vinagre', desc: 'Desinfectante y removedor de manchas' },
         baking: { name: 'Bicarbonato', desc: 'Limpiador multiusos suave' },
         flower: { name: 'Flor de Izote', desc: 'Tradición guatemalteca' },
         ecoTitle: 'Compromiso Ecológico',
-        ecoText: 'Utilizamos empaques biodegradables, recargables y trabajamos con pequeños productores en Guatemala para garantizar prácticas sostenibles.'
+        ecoText:
+          'Utilizamos empaques biodegradables, recargables y trabajamos con pequeños productores en Guatemala para garantizar prácticas sostenibles.'
       },
       testimonials: {
         tag: 'Testimonios',
         title1: 'Lo que Dicen',
         title2: 'Nuestros Clientes',
         testimonial1: {
-          text: '"Desde que Piox Natural comenzó a limpiar mi casa, mis alergias han mejorado increíblemente. El aroma a lavanda es divino y saber que no hay químicos tóxicos me da mucha paz."',
+          text:
+            '"Desde que Piox Natural comenzó a limpiar mi casa, mis alergias han mejorado increíblemente. El aroma a lavanda es divino y saber que no hay químicos tóxicos me da mucha paz."',
           name: 'María González',
           location: 'Cambridge, MA'
         },
         testimonial2: {
-          text: '"Como madre de dos niños pequeños, siempre me preocuparon los productos de limpieza. Olga y su equipo usan productos que son seguros y efectivos. ¡Altamente recomendados!"',
+          text:
+            '"Como madre de dos niños pequeños, siempre me preocuparon los productos de limpieza. Olga y su equipo usan productos que son seguros y efectivos. ¡Altamente recomendados!"',
           name: 'Jennifer Smith',
           location: 'Boston, MA'
         },
         testimonial3: {
-          text: '"El servicio de lavandería con aromaterapia es increíble. Mi ropa nunca ha olido tan bien y es reconfortante saber que es todo natural."',
+          text:
+            '"El servicio de lavandería con aromaterapia es increíble. Mi ropa nunca ha olido tan bien y es reconfortante saber que es todo natural."',
           name: 'Carlos Méndez',
           location: 'Somerville, MA'
         }
@@ -319,7 +340,8 @@ export class App {
         tag: 'Membresías',
         title1: 'Planes',
         title2: 'Mensuales',
-        subtitle: 'Ahorra con nuestros planes de membresía y mantén tu hogar siempre impecable.',
+        subtitle:
+          'Ahorra con nuestros planes de membresía y mantén tu hogar siempre impecable.',
         essential: {
           name: 'Esencial',
           feature1: '2 limpiezas mensuales',
@@ -354,7 +376,8 @@ export class App {
         title1: 'Comienza tu Camino',
         title2: 'hacia un Hogar',
         title3: 'Más Natural',
-        description: 'Estamos aquí para responder tus preguntas y crear un plan de limpieza personalizado para tu hogar o negocio.',
+        description:
+          'Estamos aquí para responder tus preguntas y crear un plan de limpieza personalizado para tu hogar o negocio.',
         phoneLabel: 'Teléfono / WhatsApp',
         emailLabel: 'Email',
         locationLabel: 'Ubicación',
@@ -386,7 +409,8 @@ export class App {
         contactTitle: 'Contacto',
         ourStory: 'Nuestra Historia',
         ingredients: 'Ingredientes',
-        copyright: '© 2025 Piox Natural Cleaning & Laundry Services. Todos los derechos reservados.',
+        copyright:
+          '© 2025 Piox Natural Cleaning & Laundry Services. Todos los derechos reservados.',
         eco: 'Eco-Friendly',
         insured: 'Asegurado',
         minority: 'Minority-Owned Business'
@@ -406,7 +430,8 @@ export class App {
         title1: 'Natural Cleaning',
         titleAccent: 'and laundry service',
         title2: 'in Boston and surrounding areas',
-        subtitle: 'We transform your home into a sanctuary of purity with handcrafted natural products, inspired by ancestral Mayan wisdom.',
+        subtitle:
+          'We transform your home into a sanctuary of purity with handcrafted natural products, inspired by ancestral Mayan wisdom.',
         cta1: 'Request Quote',
         cta2: 'View Services',
         stat1Label: 'Natural',
@@ -426,28 +451,32 @@ export class App {
         tag: 'Our Services',
         title1: 'We Care for Your Home',
         title2: 'Naturally',
-        subtitle: 'We offer professional cleaning services using exclusively natural products that care for your health and the environment.',
+        subtitle:
+          'We offer professional cleaning services using exclusively natural products that care for your health and the environment.',
         residential: {
           title: 'Residential Cleaning',
-          description: 'Deep home cleaning with 100% natural products that eliminate germs without leaving toxic residues.',
+          description:
+            'Deep home cleaning with 100% natural products that eliminate germs without leaving toxic residues.',
           feature1: 'Weekly regular cleaning',
           feature2: 'Monthly deep cleaning',
           feature3: 'Natural disinfection',
           price: 'From $120'
         },
-        deep: {
-          badge: 'Most Popular',
-          
+        laundry: {
+          badge: 'Most Popular', // ✅ Laundry featured
           title: 'Natural Laundry',
-          description: 'We care for your clothes with natural soaps and lavender aromatherapy options.',
+          description:
+            'We care for your clothes with natural soaps and lavender aromatherapy options.',
           feature1: 'Washing with natural products',
           feature2: 'Aromatherapy included',
           feature3: 'Delicate fabric care',
           price: 'From $1.50/lb'
         },
-        laundry: {
-         title: 'Deep Cleaning',
-          description: 'Complete service for moves, post-construction, or thorough spring cleaning.',
+        deep: {
+          // (sin badge)
+          title: 'Deep Cleaning',
+          description:
+            'Complete service for moves, post-construction, or thorough spring cleaning.',
           feature1: 'Move-in/move-out cleaning',
           feature2: 'Post-construction',
           feature3: 'Carpet cleaning',
@@ -455,7 +484,8 @@ export class App {
         },
         commercial: {
           title: 'Commercial Cleaning',
-          description: 'We maintain clean and healthy workspaces for your team and clients.',
+          description:
+            'We maintain clean and healthy workspaces for your team and clients.',
           feature1: 'Offices and clinics',
           feature2: 'Wellness studios',
           feature3: 'Monthly contracts',
@@ -469,9 +499,12 @@ export class App {
         founderName: 'Olga Piox',
         founderTitle: 'Founder',
         badge: 'Mayan Tradition',
-        text1: 'My name is <strong>Olga Piox</strong>. Lavender & Piox Natural Cleaning was born after multiple emergency room visits where I discovered I was suffering severe allergic reactions from years of using harsh chemicals for cleaning.',
-        text2: 'It was time to end the painful skin eruptions and reclaim the wisdom of my Indigenous Mayan ancestors who relied on Mother Nature\'s gifts.',
-        text3: 'I began replacing standard cleaning agents with organic cleaning recipes and disinfectant formulas passed down through my culture. My clients love the fresh feeling and healthy aromas that fill their homes.',
+        text1:
+          'My name is <strong>Olga Piox</strong>. Lavender & Piox Natural Cleaning was born after multiple emergency room visits where I discovered I was suffering severe allergic reactions from years of using harsh chemicals for cleaning.',
+        text2:
+          "It was time to end the painful skin eruptions and reclaim the wisdom of my Indigenous Mayan ancestors who relied on Mother Nature's gifts.",
+        text3:
+          'I began replacing standard cleaning agents with organic cleaning recipes and disinfectant formulas passed down through my culture. My clients love the fresh feeling and healthy aromas that fill their homes.',
         value1: 'Sustainability',
         value2: 'Cultural Authenticity',
         value3: 'Wellbeing',
@@ -481,31 +514,36 @@ export class App {
         tag: 'Natural Ingredients',
         title1: 'The Power of',
         title2: 'Nature',
-        subtitle: 'We use pure and natural ingredients, many of them imported directly from cooperatives in Antigua, Guatemala.',
+        subtitle:
+          'We use pure and natural ingredients, many of them imported directly from cooperatives in Antigua, Guatemala.',
         lavender: { name: 'Lavender', desc: 'Relaxing and natural antibacterial' },
         citrus: { name: 'Citrus', desc: 'Degreaser and aromatizer' },
         vinegar: { name: 'Vinegar', desc: 'Disinfectant and stain remover' },
         baking: { name: 'Baking Soda', desc: 'Gentle multi-purpose cleaner' },
         flower: { name: 'Izote Flower', desc: 'Guatemalan tradition' },
         ecoTitle: 'Eco Commitment',
-        ecoText: 'We use biodegradable, refillable packaging and work with small producers in Guatemala to ensure sustainable practices.'
+        ecoText:
+          'We use biodegradable, refillable packaging and work with small producers in Guatemala to ensure sustainable practices.'
       },
       testimonials: {
         tag: 'Testimonials',
         title1: 'What Our',
         title2: 'Clients Say',
         testimonial1: {
-          text: '"Since Piox Natural started cleaning my house, my allergies have improved incredibly. The lavender scent is divine and knowing there are no toxic chemicals gives me so much peace."',
+          text:
+            '"Since Piox Natural started cleaning my house, my allergies have improved incredibly. The lavender scent is divine and knowing there are no toxic chemicals gives me so much peace."',
           name: 'María González',
           location: 'Cambridge, MA'
         },
         testimonial2: {
-          text: '"As a mother of two small children, I was always worried about cleaning products. Olga and her team use products that are safe and effective. Highly recommended!"',
+          text:
+            '"As a mother of two small children, I was always worried about cleaning products. Olga and her team use products that are safe and effective. Highly recommended!"',
           name: 'Jennifer Smith',
           location: 'Boston, MA'
         },
         testimonial3: {
-          text: '"The aromatherapy laundry service is amazing. My clothes have never smelled so good and it\'s comforting to know it\'s all natural."',
+          text:
+            `"The aromatherapy laundry service is amazing. My clothes have never smelled so good and it's comforting to know it's all natural."`,
           name: 'Carlos Méndez',
           location: 'Somerville, MA'
         }
@@ -514,7 +552,8 @@ export class App {
         tag: 'Memberships',
         title1: 'Monthly',
         title2: 'Plans',
-        subtitle: 'Save with our membership plans and keep your home always spotless.',
+        subtitle:
+          'Save with our membership plans and keep your home always spotless.',
         essential: {
           name: 'Essential',
           feature1: '2 monthly cleanings',
@@ -549,7 +588,8 @@ export class App {
         title1: 'Start Your Journey',
         title2: 'to a',
         title3: 'More Natural Home',
-        description: 'We\'re here to answer your questions and create a personalized cleaning plan for your home or business.',
+        description:
+          "We're here to answer your questions and create a personalized cleaning plan for your home or business.",
         phoneLabel: 'Phone / WhatsApp',
         emailLabel: 'Email',
         locationLabel: 'Location',
@@ -581,7 +621,8 @@ export class App {
         contactTitle: 'Contact',
         ourStory: 'Our Story',
         ingredients: 'Ingredients',
-        copyright: '© 2025 Piox Natural Cleaning & Laundry Services. All rights reserved.',
+        copyright:
+          '© 2025 Piox Natural Cleaning & Laundry Services. All rights reserved.',
         eco: 'Eco-Friendly',
         insured: 'Insured',
         minority: 'Minority-Owned Business'
@@ -593,8 +634,15 @@ export class App {
     return this.translations[this.currentLang];
   }
 
+  ngOnInit(): void {
+    const savedLang = localStorage.getItem('piox-lang') as Language;
+    if (savedLang === 'es' || savedLang === 'en') {
+      this.currentLang = savedLang;
+    }
+  }
+
   @HostListener('window:scroll', [])
-  onWindowScroll() {
+  onWindowScroll(): void {
     this.isScrolled = window.scrollY > 50;
   }
 
@@ -608,15 +656,24 @@ export class App {
 
   toggleLanguage(): void {
     this.currentLang = this.currentLang === 'es' ? 'en' : 'es';
-    // Optionally save to localStorage
     localStorage.setItem('piox-lang', this.currentLang);
   }
 
-  ngOnInit(): void {
-    // Load saved language preference
-    const savedLang = localStorage.getItem('piox-lang') as Language;
-    if (savedLang && (savedLang === 'es' || savedLang === 'en')) {
-      this.currentLang = savedLang;
-    }
+  // ✅ Helpers para el template
+  serviceIcon(key: ServiceKey): string {
+    // 🧺💜 = logo/ícono de lavandería + lavanda
+    if (key === 'laundry') return '🧺💜';
+    if (key === 'residential') return '🏠';
+    if (key === 'deep') return '✨';
+    return '🏢';
+  }
+
+  isFeatured(key: ServiceKey): boolean {
+    return key === 'laundry';
+  }
+
+  // ✅ Devuelve data del servicio según key
+  getService(key: ServiceKey) {
+    return this.t.services[key];
   }
 }
