@@ -209,9 +209,9 @@ export class App {
       },
       hero: {
         badge: '🌸 100% Natural & Artesanal',
-        title1: 'Limpieza Natural',
-        titleAccent: 'desde Antigua Guatemala',
-        title2: 'hasta Boston',
+        title1: 'Servicio de limpieza',
+        titleAccent: 'y lavandería natural',
+        title2: 'en Boston y alrededores',
         subtitle: 'Transformamos tu hogar en un santuario de pureza con productos naturales elaborados artesanalmente, inspirados en la sabiduría ancestral Maya.',
         cta1: 'Solicitar Cotización',
         cta2: 'Ver Servicios',
@@ -404,8 +404,8 @@ export class App {
       hero: {
         badge: '🌸 100% Natural & Handcrafted',
         title1: 'Natural Cleaning',
-        titleAccent: 'and Laundry Service',
-        title2: 'On Boston',
+        titleAccent: 'and laundry service in',
+        title2: 'Boston and surrounding areas',
         subtitle: 'We transform your home into a sanctuary of purity with handcrafted natural products, inspired by ancestral Mayan wisdom.',
         cta1: 'Request Quote',
         cta2: 'View Services',
@@ -437,20 +437,21 @@ export class App {
         },
         deep: {
           badge: 'Most Popular',
-          title: 'Deep Cleaning',
-          description: 'Complete service for moves, post-construction, or thorough spring cleaning.',
-          feature1: 'Move-in/move-out cleaning',
-          feature2: 'Post-construction',
-          feature3: 'Carpet cleaning',
-          price: 'From $250'
-        },
-        laundry: {
+          
           title: 'Natural Laundry',
           description: 'We care for your clothes with natural soaps and lavender aromatherapy options.',
           feature1: 'Washing with natural products',
           feature2: 'Aromatherapy included',
           feature3: 'Delicate fabric care',
           price: 'From $1.50/lb'
+        },
+        laundry: {
+         title: 'Deep Cleaning',
+          description: 'Complete service for moves, post-construction, or thorough spring cleaning.',
+          feature1: 'Move-in/move-out cleaning',
+          feature2: 'Post-construction',
+          feature3: 'Carpet cleaning',
+          price: 'From $250'
         },
         commercial: {
           title: 'Commercial Cleaning',
