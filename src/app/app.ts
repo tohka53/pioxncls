@@ -209,8 +209,8 @@ export class App {
       },
       hero: {
         badge: '🧺 Lavandería Natural a Domicilio',
-        title1: 'Lavandería y limpieza',
-        titleAccent: 'natural a domicilio',
+        title1: 'Servicios de Lavandería',
+        titleAccent: 'y Limpieza',
         title2: 'en Boston y alrededores',
         subtitle: 'Recogemos, lavamos con productos 100% naturales y entregamos tu ropa fresca y limpia. También limpiamos estudios y apartamentos de estudiantes.',
         cta1: 'Programar Recogida',
@@ -224,7 +224,7 @@ export class App {
       },
       features: {
         organic: 'Productos Naturales',
-        residential: 'Limpieza de Estudios',
+        residential: 'Limpieza del Hogar',
         laundry: 'Lavandería a Domicilio',
         eco: 'Eco-Friendly'
       },
@@ -251,7 +251,7 @@ export class App {
           price: '$2.00/lb'
         },
         laundry: {
-          title: 'Limpieza de Estudios',
+          title: 'Limpieza del Hogar',
           description: 'Limpieza profesional de estudios y apartamentos pequeños. Perfecto para estudiantes universitarios.',
           feature1: 'Estudios y apartamentos pequeños',
           feature2: 'Productos 100% naturales',
@@ -269,14 +269,14 @@ export class App {
       },
       about: {
         tag: 'Nuestra Historia',
-        title1: 'De Antigua, Guatemala',
-        title2: 'Boston',
+        title1: 'Arraigados en',
+        title2: 'Tradiciones Mayas',
         founderName: 'Olga Piox',
         founderTitle: 'Fundadora',
         badge: 'Tradición Maya',
-        text1: 'Mi nombre es <strong>Olga Piox</strong>. Lavender & Piox Natural Cleaning nació después de múltiples visitas a emergencias donde descubrí que sufría reacciones alérgicas severas por años de usar químicos agresivos para limpiar.',
+        text1: 'Mi nombre es <strong>Olga Piox</strong>. Soy nativa de Guatemala con raíces indígenas. Lavender & Piox Natural Cleaning nació después de múltiples visitas a emergencias donde descubrí que sufría reacciones alérgicas severas por años de usar químicos agresivos para limpiar.',
         text2: 'Era tiempo de terminar con las dolorosas erupciones en la piel y reclamar la sabiduría de mis ancestros Mayas Indígenas que dependían de los regalos de la Madre Naturaleza.',
-        text3: 'Ahora ofrecemos lavandería a domicilio y limpieza de estudios usando recetas orgánicas y fórmulas desinfectantes de mi cultura. Nuestros clientes aman la frescura y los aromas saludables en su ropa y hogares.',
+        text3: 'Así fue como llegué a depender de recetas orgánicas y fórmulas desinfectantes de mi cultura. Usamos estos productos en nuestros servicios de lavandería y limpieza del hogar. Nuestros clientes aman la frescura y los aromas saludables en su ropa y hogares.',
         value1: 'Sostenibilidad',
         value2: 'Autenticidad Cultural',
         value3: 'Bienestar',
@@ -339,7 +339,7 @@ export class App {
           cta: 'Elegir Plan'
         },
         enterprise: {
-          name: 'Limpieza Estudio',
+          name: 'Limpieza del Hogar',
           price: 'Desde $80',
           feature1: 'Estudios hasta 400 sq ft',
           feature2: 'Productos naturales',
@@ -370,7 +370,7 @@ export class App {
           servicePlaceholder: 'Seleccionar servicio...',
           serviceOpt1: 'Lavandería a Domicilio',
           serviceOpt2: 'Wash & Fold Express',
-          serviceOpt3: 'Limpieza de Estudio',
+          serviceOpt3: 'Limpieza del Hogar',
           serviceOpt4: 'Paquete Estudiante',
           serviceOpt5: 'Otro',
           messageLabel: 'Mensaje',
@@ -403,9 +403,9 @@ export class App {
       },
       hero: {
         badge: '🧺 Natural Laundry Pickup & Delivery',
-        title1: 'Natural laundry',
-        titleAccent: 'pickup & delivery',
-        title2: 'in Boston and surrounding areas',
+        title1: 'Laundry & Cleaning',
+        titleAccent: 'Services',
+        title2: 'in Boston and Surrounding areas',
         subtitle: 'We pick up, wash with 100% natural products, and deliver your clothes fresh and clean. We also clean student studios and apartments.',
         cta1: 'Schedule Pickup',
         cta2: 'View Services',
@@ -418,7 +418,7 @@ export class App {
       },
       features: {
         organic: 'Natural Products',
-        residential: 'Studio Cleaning',
+        residential: 'Home Cleaning',
         laundry: 'Laundry Delivery',
         eco: 'Eco-Friendly'
       },
@@ -445,7 +445,7 @@ export class App {
           price: '$4.00/lb'
         },
         laundry: {
-          title: 'Studio Cleaning',
+          title: 'Home Cleaning',
           description: 'Professional cleaning for studios and small apartments. Perfect for college students.',
           feature1: 'Studios and small apartments',
           feature2: '100% natural products',
@@ -463,14 +463,14 @@ export class App {
       },
       about: {
         tag: 'Our Story',
-        title1: 'From Antigua, Guatemala',
-        title2: 'Boston',
+        title1: 'Rooted in',
+        title2: 'Mayan Traditions',
         founderName: 'Olga Piox',
         founderTitle: 'Founder',
         badge: 'Mayan Tradition',
-        text1: 'My name is <strong>Olga Piox</strong>. Lavender & Piox Natural Cleaning was born after multiple emergency room visits where I discovered I was suffering severe allergic reactions from years of using harsh chemicals for cleaning.',
+        text1: 'My name is <strong>Olga Piox</strong>. I am a native of Guatemala with indigenous roots. Lavender & Piox Natural Cleaning was born after multiple emergency room visits where I discovered I was suffering severe allergic reactions from years of using harsh chemicals for cleaning.',
         text2: 'It was time to end the painful skin eruptions and reclaim the wisdom of my Indigenous Mayan ancestors who relied on Mother Nature\'s gifts.',
-        text3: 'Now we offer laundry pickup & delivery and studio cleaning using organic recipes and disinfectant formulas from my culture. Our clients love the freshness and healthy aromas in their clothes and homes.',
+        text3: 'This is how I came to rely on organic recipes and disinfectant formulas from my culture. We use these products in our laundry and home cleaning services. Our clients love the freshness and healthy aromas in their clothes and homes.',
         value1: 'Sustainability',
         value2: 'Cultural Authenticity',
         value3: 'Wellbeing',
@@ -533,7 +533,7 @@ export class App {
           cta: 'Choose Plan'
         },
         enterprise: {
-          name: 'Studio Cleaning',
+          name: 'Home Cleaning',
           price: 'From $80',
           feature1: 'Studios up to 400 sq ft',
           feature2: 'Natural products',
@@ -564,7 +564,7 @@ export class App {
           servicePlaceholder: 'Select service...',
           serviceOpt1: 'Laundry Pickup & Delivery',
           serviceOpt2: 'Wash & Fold Express',
-          serviceOpt3: 'Studio Cleaning',
+          serviceOpt3: 'Home Cleaning',
           serviceOpt4: 'Student Package',
           serviceOpt5: 'Other',
           messageLabel: 'Message',
