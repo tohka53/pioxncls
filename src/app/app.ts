@@ -104,8 +104,6 @@ interface Translations {
     title1: string;
     title2: string;
     testimonial1: { text: string; name: string; location: string };
-    testimonial2: { text: string; name: string; location: string };
-    testimonial3: { text: string; name: string; location: string };
   };
   pricing: {
     tag: string;
@@ -208,11 +206,11 @@ export class App {
         callNow: 'Llamar Ahora'
       },
       hero: {
-        badge: '🧺 Lavandería Natural a Domicilio',
+        badge: '🪻 Lavandería Natural a Domicilio',
         title1: 'Servicios de Lavandería',
         titleAccent: 'y Limpieza',
         title2: 'en Boston y alrededores',
-        subtitle: 'Recogemos, lavamos con productos 100% naturales y entregamos tu ropa fresca y limpia. También limpiamos estudios y apartamentos de estudiantes.',
+        subtitle: 'Recogemos, lavamos con productos 100% naturales y entregamos tu ropa fresca y limpia. También limpiamos estudios y apartamentos.',
         cta1: 'Programar Recogida',
         cta2: 'Ver Servicios',
         stat1Label: 'Natural',
@@ -232,7 +230,7 @@ export class App {
         tag: 'Nuestros Servicios',
         title1: 'Lavandería y Limpieza',
         title2: 'Natural',
-        subtitle: 'Servicio de lavandería a domicilio y limpieza de estudios para estudiantes. Usamos solo productos naturales que cuidan tu ropa, tu salud y el medio ambiente.',
+        subtitle: 'Servicio de lavandería a domicilio y limpieza de estudios y apartamentos. Usamos solo productos naturales que cuidan tu ropa, tu salud y el medio ambiente.',
         residential: {
           title: 'Lavandería a Domicilio',
           description: 'Recogemos tu ropa, la lavamos con jabones naturales artesanales y la entregamos fresca con aroma a lavanda.',
@@ -252,8 +250,8 @@ export class App {
         },
         laundry: {
           title: 'Limpieza del Hogar',
-          description: 'Limpieza profesional de estudios y apartamentos pequeños. Perfecto para estudiantes universitarios.',
-          feature1: 'Estudios y apartamentos pequeños',
+          description: 'Limpieza profesional de estudios y apartamentos. Perfecto para estudiantes universitarios y profesionales ocupados.',
+          feature1: 'Estudios y apartamentos',
           feature2: 'Productos 100% naturales',
           feature3: 'Precios especiales para estudiantes',
           price: 'Desde $80'
@@ -270,12 +268,12 @@ export class App {
       about: {
         tag: 'Nuestra Historia',
         title1: 'Arraigados en',
-        title2: 'Tradiciones Mayas',
+        title2: 'Tradiciones Naturales',
         founderName: 'Olga Piox',
         founderTitle: 'Fundadora',
-        badge: 'Tradición Maya',
+        badge: 'Tradición Natural',
         text1: 'Mi nombre es <strong>Olga Piox</strong>. Soy nativa de Guatemala con raíces indígenas. Lavender & Piox Natural Cleaning nació después de múltiples visitas a emergencias donde descubrí que sufría reacciones alérgicas severas por años de usar químicos agresivos para limpiar.',
-        text2: 'Era tiempo de terminar con las dolorosas erupciones en la piel y reclamar la sabiduría de mis ancestros Mayas Indígenas que dependían de los regalos de la Madre Naturaleza.',
+        text2: 'Era tiempo de terminar con las dolorosas erupciones en la piel y reclamar la sabiduría de mis ancestros que dependían de los regalos de la Madre Naturaleza.',
         text3: 'Así fue como llegué a depender de recetas orgánicas y fórmulas desinfectantes de mi cultura. Usamos estos productos en nuestros servicios de lavandería y limpieza del hogar. Nuestros clientes aman la frescura y los aromas saludables en su ropa y hogares.',
         value1: 'Sostenibilidad',
         value2: 'Autenticidad Cultural',
@@ -286,7 +284,7 @@ export class App {
         tag: 'Ingredientes Naturales',
         title1: 'El Poder de la',
         title2: 'Naturaleza',
-        subtitle: 'Lavamos tu ropa con ingredientes puros y naturales, muchos importados directamente de cooperativas en Antigua, Guatemala.',
+        subtitle: 'Lavamos tu ropa con ingredientes puros y naturales, seleccionados cuidadosamente por su efectividad y gentileza.',
         lavender: { name: 'Lavanda', desc: 'Aroma relajante y antibacterial' },
         citrus: { name: 'Cítricos', desc: 'Elimina manchas y olores' },
         vinegar: { name: 'Vinagre', desc: 'Suavizante natural' },
@@ -300,19 +298,9 @@ export class App {
         title1: 'Lo que Dicen',
         title2: 'Nuestros Clientes',
         testimonial1: {
-          text: '"Como estudiante de BU, no tengo tiempo para lavar. Piox recoge mi ropa y me la devuelve oliendo increíble a lavanda. ¡El mejor servicio!"',
-          name: 'Carlos Rodríguez',
-          location: 'Boston University'
-        },
-        testimonial2: {
-          text: '"La limpieza de mi estudio quedó impecable y el aroma natural es divino. Además los precios son muy accesibles para estudiantes."',
-          name: 'María Santos',
-          location: 'Northeastern University'
-        },
-        testimonial3: {
-          text: '"Por fin un servicio de lavandería que usa productos naturales. Mi ropa está más suave y mis alergias han mejorado mucho."',
-          name: 'Jennifer Smith',
-          location: 'Cambridge, MA'
+          text: '"¡Recomiendo mucho a Olga! La conozco a ella y a su familia desde antes de la pandemia y siempre es un placer trabajar con ella. Muy trabajadora, confiable, eficiente, flexible y con excelentes sugerencias. Limpia con productos completamente naturales, y tiene una organización maravillosa. ¡Definitivamente contraten a Olga!"',
+          name: 'Tiffany P.',
+          location: 'Boston, MA'
         }
       },
       pricing: {
@@ -354,7 +342,7 @@ export class App {
         title1: 'Programa tu',
         title2: 'Recogida',
         title3: 'Hoy',
-        description: 'Agenda tu recogida de lavandería o solicita una cotización para limpieza de tu estudio. ¡Respondemos en menos de 2 horas!',
+        description: 'Agenda tu recogida de lavandería o solicita una cotización para limpieza de tu estudio o apartamento. ¡Respondemos en menos de 2 horas!',
         phoneLabel: 'Teléfono / WhatsApp',
         emailLabel: 'Email',
         locationLabel: 'Área de Servicio',
@@ -379,7 +367,7 @@ export class App {
         }
       },
       footer: {
-        tagline: "Nature's Touch from Antigua to Boston",
+        tagline: 'Cleaning Earth One Home at a Time!',
         slogan: 'Ropa Fresca, Vida Natural',
         servicesTitle: 'Servicios',
         companyTitle: 'Empresa',
@@ -402,11 +390,11 @@ export class App {
         callNow: 'Call Now'
       },
       hero: {
-        badge: '🧺 Natural Laundry Pickup & Delivery',
+        badge: '🪻 Natural Laundry Pickup & Delivery',
         title1: 'Laundry & Cleaning',
         titleAccent: 'Services',
         title2: 'in Boston and Surrounding areas',
-        subtitle: 'We pick up, wash with 100% natural products, and deliver your clothes fresh and clean. We also clean student studios and apartments.',
+        subtitle: 'We pick up, wash with 100% natural products, and deliver your clothes fresh and clean. We also clean studios and apartments.',
         cta1: 'Schedule Pickup',
         cta2: 'View Services',
         stat1Label: 'Natural',
@@ -426,7 +414,7 @@ export class App {
         tag: 'Our Services',
         title1: 'Laundry & Cleaning',
         title2: 'Naturally',
-        subtitle: 'Laundry pickup & delivery and studio cleaning for students. We use only natural products that care for your clothes, your health, and the environment.',
+        subtitle: 'Laundry pickup & delivery and studio/apartment cleaning. We use only natural products that care for your clothes, your health, and the environment.',
         residential: {
           title: 'Laundry Pickup & Delivery',
           description: 'We pick up your clothes, wash them with handcrafted natural soaps, and deliver them fresh with a lavender scent.',
@@ -446,8 +434,8 @@ export class App {
         },
         laundry: {
           title: 'Home Cleaning',
-          description: 'Professional cleaning for studios and small apartments. Perfect for college students.',
-          feature1: 'Studios and small apartments',
+          description: 'Professional cleaning for studios and apartments. Perfect for college students and busy professionals.',
+          feature1: 'Studios and apartments',
           feature2: '100% natural products',
           feature3: 'Special student pricing',
           price: 'From $80'
@@ -464,12 +452,12 @@ export class App {
       about: {
         tag: 'Our Story',
         title1: 'Rooted in',
-        title2: 'Mayan Traditions',
+        title2: 'Natural Traditions',
         founderName: 'Olga Piox',
         founderTitle: 'Founder',
-        badge: 'Mayan Tradition',
+        badge: 'Natural Tradition',
         text1: 'My name is <strong>Olga Piox</strong>. I am a native of Guatemala with indigenous roots. Lavender & Piox Natural Cleaning was born after multiple emergency room visits where I discovered I was suffering severe allergic reactions from years of using harsh chemicals for cleaning.',
-        text2: 'It was time to end the painful skin eruptions and reclaim the wisdom of my Indigenous Mayan ancestors who relied on Mother Nature\'s gifts.',
+        text2: 'It was time to end the painful skin eruptions and reclaim the wisdom of my ancestors who relied on Mother Nature\'s gifts.',
         text3: 'This is how I came to rely on organic recipes and disinfectant formulas from my culture. We use these products in our laundry and home cleaning services. Our clients love the freshness and healthy aromas in their clothes and homes.',
         value1: 'Sustainability',
         value2: 'Cultural Authenticity',
@@ -480,7 +468,7 @@ export class App {
         tag: 'Natural Ingredients',
         title1: 'The Power of',
         title2: 'Nature',
-        subtitle: 'We wash your clothes with pure and natural ingredients, many imported directly from cooperatives in Antigua, Guatemala.',
+        subtitle: 'We wash your clothes with pure and natural ingredients, carefully selected for their effectiveness and gentleness.',
         lavender: { name: 'Lavender', desc: 'Relaxing scent and antibacterial' },
         citrus: { name: 'Citrus', desc: 'Removes stains and odors' },
         vinegar: { name: 'Vinegar', desc: 'Natural fabric softener' },
@@ -494,19 +482,9 @@ export class App {
         title1: 'What Our',
         title2: 'Clients Say',
         testimonial1: {
-          text: '"As a BU student, I don\'t have time to do laundry. Piox picks up my clothes and returns them smelling amazing like lavender. Best service ever!"',
-          name: 'Carlos Rodriguez',
-          location: 'Boston University'
-        },
-        testimonial2: {
-          text: '"My studio cleaning was spotless and the natural scent is divine. Plus the prices are very affordable for students."',
-          name: 'Maria Santos',
-          location: 'Northeastern University'
-        },
-        testimonial3: {
-          text: '"Finally a laundry service that uses natural products. My clothes are softer and my allergies have improved so much."',
-          name: 'Jennifer Smith',
-          location: 'Cambridge, MA'
+          text: '"Highly recommend Olga! I\'ve known her and her family since before the pandemic and she is always great to work with. Very hard working, trustworthy, efficient, flexible and has great suggestions. She cleans using all natural products, and has wonderful organization and packing skills. Definitely hire Olga!"',
+          name: 'Tiffany P.',
+          location: 'Boston, MA'
         }
       },
       pricing: {
@@ -548,7 +526,7 @@ export class App {
         title1: 'Schedule Your',
         title2: 'Pickup',
         title3: 'Today',
-        description: 'Schedule your laundry pickup or request a quote for studio cleaning. We respond in less than 2 hours!',
+        description: 'Schedule your laundry pickup or request a quote for studio/apartment cleaning. We respond in less than 2 hours!',
         phoneLabel: 'Phone / WhatsApp',
         emailLabel: 'Email',
         locationLabel: 'Service Area',
@@ -573,7 +551,7 @@ export class App {
         }
       },
       footer: {
-        tagline: "Nature's Touch from Antigua to Boston",
+        tagline: 'Cleaning Earth One Home at a Time!',
         slogan: 'Fresh Clothes, Natural Life',
         servicesTitle: 'Services',
         companyTitle: 'Company',
