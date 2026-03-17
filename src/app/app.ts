@@ -104,6 +104,10 @@ interface Translations {
     title1: string;
     title2: string;
     testimonial1: { text: string; name: string; location: string };
+    testimonial2: { text: string; name: string; location: string };
+    testimonial3: { text: string; name: string; location: string };
+    testimonial4: { text: string; name: string; location: string };
+    testimonial5: { text: string; name: string; location: string };
   };
   pricing: {
     tag: string;
@@ -250,31 +254,31 @@ export class App {
         },
         laundry: {
           title: 'Limpieza del Hogar',
-          description: 'Limpieza profesional de estudios y apartamentos. Perfecto para estudiantes universitarios y profesionales ocupados.',
+          description: 'Limpieza profesional de estudios y apartamentos. Perfecto para estudiantes universitarios, profesionales ocupados y personas que necesitan un hogar ordenado.',
           feature1: 'Estudios y apartamentos',
           feature2: 'Productos 100% naturales',
-          feature3: 'Precios especiales para estudiantes',
-          price: 'Desde $80'
+          feature3: 'Precios accesibles',
+          price: 'Desde $120'
         },
         commercial: {
-          title: 'Paquete Estudiante',
-          description: 'Combo de lavandería + limpieza de estudio. El paquete perfecto para estudiantes ocupados.',
-          feature1: 'Lavandería semanal incluida',
-          feature2: 'Limpieza quincenal de estudio',
-          feature3: 'Descuento especial estudiantes',
+          title: 'Paquete de Suscripción',
+          description: 'Combo de lavandería semanal + limpieza del hogar con recogida y entrega. El paquete perfecto para quienes desean una solución completa.',
+          feature1: '🧺 Lavandería semanal incluida',
+          feature2: '🏠 Limpieza del hogar con recogida/entrega',
+          feature3: '🌿 Productos 100% naturales',
           price: 'Cotización'
         }
       },
       about: {
         tag: 'Nuestra Historia',
         title1: 'Arraigados en',
-        title2: 'Tradiciones Naturales',
+        title2: 'Tradiciones Mayas',
         founderName: 'Olga Piox',
         founderTitle: 'Fundadora',
         badge: 'Tradición Natural',
-        text1: 'Mi nombre es <strong>Olga Piox</strong>. Soy nativa de Guatemala con raíces indígenas. Lavender & Piox Natural Cleaning nació después de múltiples visitas a emergencias donde descubrí que sufría reacciones alérgicas severas por años de usar químicos agresivos para limpiar.',
+        text1: 'Mi nombre es <strong>Olga Piox</strong>. Soy nativa de Guatemala con raíces indígenas mayas. Lavender & Piox Natural Cleaning nació después de múltiples visitas a emergencias donde descubrí que sufría reacciones alérgicas severas por años de usar químicos agresivos para limpiar.',
         text2: 'Era tiempo de terminar con las dolorosas erupciones en la piel y reclamar la sabiduría de mis ancestros que dependían de los regalos de la Madre Naturaleza.',
-        text3: 'Así fue como llegué a depender de recetas orgánicas y fórmulas desinfectantes de mi cultura. Usamos estos productos en nuestros servicios de lavandería y limpieza del hogar. Nuestros clientes aman la frescura y los aromas saludables en su ropa y hogares.',
+        text3: 'Así fue como llegué a depender de recetas orgánicas y fórmulas desinfectantes de mi cultura maya. Usamos estos productos en nuestros servicios de lavandería y limpieza del hogar. Nuestros clientes aman la frescura y los aromas saludables en su ropa y hogares.',
         value1: 'Sostenibilidad',
         value2: 'Autenticidad Cultural',
         value3: 'Bienestar',
@@ -289,7 +293,7 @@ export class App {
         citrus: { name: 'Cítricos', desc: 'Elimina manchas y olores' },
         vinegar: { name: 'Vinagre', desc: 'Suavizante natural' },
         baking: { name: 'Bicarbonato', desc: 'Blanqueador suave' },
-        flower: { name: 'Flor de Izote', desc: 'Tradición guatemalteca' },
+        flower: { name: 'Flor de Izote', desc: 'Tradición maya' },
         ecoTitle: 'Cuidamos tu Ropa y el Planeta',
         ecoText: 'Nuestros jabones artesanales son biodegradables y gentiles con las telas. Tu ropa dura más y el planeta te lo agradece.'
       },
@@ -298,8 +302,28 @@ export class App {
         title1: 'Lo que Dicen',
         title2: 'Nuestros Clientes',
         testimonial1: {
-          text: '"¡Recomiendo mucho a Olga! La conozco a ella y a su familia desde antes de la pandemia y siempre es un placer trabajar con ella. Muy trabajadora, confiable, eficiente, flexible y con excelentes sugerencias. Limpia con productos completamente naturales, y tiene una organización maravillosa. ¡Definitivamente contraten a Olga!"',
+          text: '"¡Recomiendo mucho a Olga! La conozco a ella y a su familia desde antes de la pandemia y siempre es un placer trabajar con ella. Muy trabajadora, confiable, eficiente, flexible y con excelentes sugerencias. Limpia con productos completamente naturales y tiene una organización maravillosa. ¡Definitivamente contraten a Olga!"',
           name: 'Tiffany P.',
+          location: 'Boston, MA'
+        },
+        testimonial2: {
+          text: '"Olga llegó a nuestra familia no como una empresa con fines de lucro. Se presentó como alguien que quería ser parte de nuestra familia. Nos ayudó con el caos en nuestra casa. No solo limpia; organiza y da ideas sobre cómo simplificar y mantener la casa libre de estrés. ¡La recomendamos ampliamente!"',
+          name: 'Familia Daniel',
+          location: 'Boston, MA'
+        },
+        testimonial3: {
+          text: '"Recuerdo un día, después de una larga jornada de trabajo, llegué a casa con gripe y dificultad para respirar. En cuanto entré, sentí que mis fosas nasales se despejaron con el aroma a eucalipto de los productos de Olga. Entendí que los químicos no son buenos para nuestra salud. ¡La recomiendo ampliamente!"',
+          name: 'Ricky J.',
+          location: 'Boston, MA'
+        },
+        testimonial4: {
+          text: '"Olga ha sido una ayuda increíble para mí a lo largo de los años. Tiene habilidades que yo no poseo y todos estamos agradecidos por todo lo que hace por nosotros."',
+          name: 'Tricia M.',
+          location: 'Boston, MA'
+        },
+        testimonial5: {
+          text: '"¡Trabajar con Olga ha sido un placer! Trajo de vuelta la limpieza y el orden a nuestro hogar después de que tuve una operación muy seria. Es trabajadora, confiable y una excelente organizadora. ¡La recomendamos absolutamente!"',
+          name: 'Lisa',
           location: 'Boston, MA'
         }
       },
@@ -307,7 +331,7 @@ export class App {
         tag: 'Precios',
         title1: 'Planes',
         title2: 'Simples',
-        subtitle: 'Precios transparentes y accesibles. Especiales para estudiantes.',
+        subtitle: 'Precios transparentes y accesibles.',
         essential: {
           name: 'Lavandería',
           feature1: 'Recogida y entrega gratis',
@@ -318,22 +342,22 @@ export class App {
         },
         premium: {
           badge: 'Popular',
-          name: 'Paquete Estudiante',
+          name: 'Paquete de Suscripción',
           feature1: 'Lavandería semanal (hasta 15 lbs)',
-          feature2: 'Limpieza de estudio mensual',
+          feature2: 'Limpieza de hogar mensual',
           feature3: 'Productos 100% naturales',
           feature4: 'Recogida y entrega',
-          feature5: 'Descuento 15%',
+          feature5: 'Descuento especial',
           cta: 'Elegir Plan'
         },
         enterprise: {
           name: 'Limpieza del Hogar',
-          price: 'Desde $80',
-          feature1: 'Estudios hasta 400 sq ft',
+          price: 'Desde $120',
+          feature1: 'Hogares y apartamentos',
           feature2: 'Productos naturales',
           feature3: 'Cocina y baño incluidos',
           feature4: 'Aromaterapia incluida',
-          feature5: 'Descuento estudiantes',
+          feature5: 'Move-in / Move-out disponible',
           cta: 'Cotizar'
         }
       },
@@ -342,7 +366,7 @@ export class App {
         title1: 'Programa tu',
         title2: 'Recogida',
         title3: 'Hoy',
-        description: 'Agenda tu recogida de lavandería o solicita una cotización para limpieza de tu estudio o apartamento. ¡Respondemos en menos de 2 horas!',
+        description: 'Agenda tu recogida de lavandería o solicita una cotización para limpieza de tu hogar o apartamento. ¡Respondemos en menos de 2 horas!',
         phoneLabel: 'Teléfono / WhatsApp',
         emailLabel: 'Email',
         locationLabel: 'Área de Servicio',
@@ -359,7 +383,7 @@ export class App {
           serviceOpt1: 'Lavandería a Domicilio',
           serviceOpt2: 'Wash & Fold Express',
           serviceOpt3: 'Limpieza del Hogar',
-          serviceOpt4: 'Paquete Estudiante',
+          serviceOpt4: 'Paquete de Suscripción',
           serviceOpt5: 'Otro',
           messageLabel: 'Mensaje',
           messagePlaceholder: '¿Cuántas libras aproximadamente? ¿Tienes alguna preferencia de aroma?',
@@ -394,7 +418,7 @@ export class App {
         title1: 'Laundry & Cleaning',
         titleAccent: 'Services',
         title2: 'in Boston and Surrounding areas',
-        subtitle: 'We pick up, wash with 100% natural products, and deliver your clothes fresh and clean. We also clean studios and apartments.',
+        subtitle: 'We pick up, wash with 100% natural products, and deliver your clothes fresh and clean. We also clean homes and apartments.',
         cta1: 'Schedule Pickup',
         cta2: 'View Services',
         stat1Label: 'Natural',
@@ -414,7 +438,7 @@ export class App {
         tag: 'Our Services',
         title1: 'Laundry & Cleaning',
         title2: 'Naturally',
-        subtitle: 'Laundry pickup & delivery and studio/apartment cleaning. We use only natural products that care for your clothes, your health, and the environment.',
+        subtitle: 'Laundry pickup & delivery and home/apartment cleaning. We use only natural products that care for your clothes, your health, and the environment.',
         residential: {
           title: 'Laundry Pickup & Delivery',
           description: 'We pick up your clothes, wash them with handcrafted natural soaps, and deliver them fresh with a lavender scent.',
@@ -430,35 +454,35 @@ export class App {
           feature1: '24-48 hour delivery',
           feature2: 'Professional folding',
           feature3: 'Delicate fabric care',
-          price: '$4.00/lb'
+          price: '$2.00/lb'
         },
         laundry: {
           title: 'Home Cleaning',
-          description: 'Professional cleaning for studios and apartments. Perfect for college students and busy professionals.',
-          feature1: 'Studios and apartments',
+          description: 'Professional cleaning for homes and apartments. Perfect for busy professionals, older adults, and anyone who needs a clean, organized space.',
+          feature1: 'Homes & apartments',
           feature2: '100% natural products',
-          feature3: 'Special student pricing',
-          price: 'From $80'
+          feature3: 'Move-in / Move-out available',
+          price: 'From $120'
         },
         commercial: {
-          title: 'Student Package',
-          description: 'Laundry + studio cleaning combo. The perfect package for busy students.',
-          feature1: 'Weekly laundry included',
-          feature2: 'Bi-weekly studio cleaning',
-          feature3: 'Special student discount',
-          price: 'Quote'
+          title: 'Subscription Package',
+          description: 'Weekly laundry + home cleaning with pickup & delivery. The perfect all-in-one solution for a naturally clean home.',
+          feature1: '🧺 Weekly laundry included',
+          feature2: '🏠 Home cleaning with pickup/delivery',
+          feature3: '🌿 100% natural products',
+          price: 'Get Quote'
         }
       },
       about: {
         tag: 'Our Story',
         title1: 'Rooted in',
-        title2: 'Natural Traditions',
+        title2: 'Mayan Traditions',
         founderName: 'Olga Piox',
         founderTitle: 'Founder',
         badge: 'Natural Tradition',
-        text1: 'My name is <strong>Olga Piox</strong>. I am a native of Guatemala with indigenous roots. Lavender & Piox Natural Cleaning was born after multiple emergency room visits where I discovered I was suffering severe allergic reactions from years of using harsh chemicals for cleaning.',
+        text1: 'My name is <strong>Olga Piox</strong>. I am a native of Guatemala with indigenous Mayan roots. Lavender & Piox Natural Cleaning was born after multiple emergency room visits where I discovered I was suffering severe allergic reactions from years of using harsh chemicals for cleaning.',
         text2: 'It was time to end the painful skin eruptions and reclaim the wisdom of my ancestors who relied on Mother Nature\'s gifts.',
-        text3: 'This is how I came to rely on organic recipes and disinfectant formulas from my culture. We use these products in our laundry and home cleaning services. Our clients love the freshness and healthy aromas in their clothes and homes.',
+        text3: 'This is how I came to rely on organic recipes and disinfectant formulas from my Mayan culture. We use these products in our laundry and home cleaning services. Our clients love the freshness and healthy aromas in their clothes and homes.',
         value1: 'Sustainability',
         value2: 'Cultural Authenticity',
         value3: 'Wellbeing',
@@ -473,7 +497,7 @@ export class App {
         citrus: { name: 'Citrus', desc: 'Removes stains and odors' },
         vinegar: { name: 'Vinegar', desc: 'Natural fabric softener' },
         baking: { name: 'Baking Soda', desc: 'Gentle whitener' },
-        flower: { name: 'Izote Flower', desc: 'Guatemalan tradition' },
+        flower: { name: 'Izote Flower', desc: 'Mayan tradition' },
         ecoTitle: 'We Care for Your Clothes & the Planet',
         ecoText: 'Our handcrafted soaps are biodegradable and gentle on fabrics. Your clothes last longer and the planet thanks you.'
       },
@@ -485,13 +509,33 @@ export class App {
           text: '"Highly recommend Olga! I\'ve known her and her family since before the pandemic and she is always great to work with. Very hard working, trustworthy, efficient, flexible and has great suggestions. She cleans using all natural products, and has wonderful organization and packing skills. Definitely hire Olga!"',
           name: 'Tiffany P.',
           location: 'Boston, MA'
+        },
+        testimonial2: {
+          text: '"Olga came to our family not as a profit-making company. She presented herself as someone who wants to be a member of our family. She helped us with the chaos in our house. She doesn\'t just clean; she organizes and gives ideas on how to simplify and keep our house organized and stress free. We highly recommend her!"',
+          name: 'Daniel\'s Family',
+          location: 'Boston, MA'
+        },
+        testimonial3: {
+          text: '"I remember one day after a long day at the office, I came home sick with the flu and had difficulty breathing. As soon as I entered, I felt my nasal passages clear from the eucalyptus scent of Olga\'s products. I understood then that chemicals aren\'t good for our health — and sometimes we realize this too late. I highly recommend her!"',
+          name: 'Ricky J.',
+          location: 'Boston, MA'
+        },
+        testimonial4: {
+          text: '"Olga has been an amazing help to me over the years. She has skills that I do not possess and we are all grateful for all she does for us."',
+          name: 'Tricia M.',
+          location: 'Boston, MA'
+        },
+        testimonial5: {
+          text: '"Working with Olga has been a delight! She really brought cleanliness and order back to our home after I had a very serious operation. She is hard-working, reliable, and an excellent organizer. We would absolutely recommend her."',
+          name: 'Lisa',
+          location: 'Boston, MA'
         }
       },
       pricing: {
         tag: 'Pricing',
         title1: 'Simple',
         title2: 'Plans',
-        subtitle: 'Transparent and affordable pricing. Student specials available.',
+        subtitle: 'Transparent and affordable pricing.',
         essential: {
           name: 'Laundry',
           feature1: 'Free pickup & delivery',
@@ -502,22 +546,22 @@ export class App {
         },
         premium: {
           badge: 'Popular',
-          name: 'Student Package',
+          name: 'Subscription Package',
           feature1: 'Weekly laundry (up to 15 lbs)',
-          feature2: 'Monthly studio cleaning',
+          feature2: 'Monthly home cleaning',
           feature3: '100% natural products',
           feature4: 'Pickup & delivery',
-          feature5: '15% discount',
+          feature5: 'Special discount',
           cta: 'Choose Plan'
         },
         enterprise: {
           name: 'Home Cleaning',
-          price: 'From $80',
-          feature1: 'Studios up to 400 sq ft',
+          price: 'From $120',
+          feature1: 'Homes & apartments',
           feature2: 'Natural products',
           feature3: 'Kitchen & bath included',
           feature4: 'Aromatherapy included',
-          feature5: 'Student discount',
+          feature5: 'Move-in / Move-out available',
           cta: 'Get Quote'
         }
       },
@@ -526,7 +570,7 @@ export class App {
         title1: 'Schedule Your',
         title2: 'Pickup',
         title3: 'Today',
-        description: 'Schedule your laundry pickup or request a quote for studio/apartment cleaning. We respond in less than 2 hours!',
+        description: 'Schedule your laundry pickup or request a quote for home/apartment cleaning. We respond in less than 2 hours!',
         phoneLabel: 'Phone / WhatsApp',
         emailLabel: 'Email',
         locationLabel: 'Service Area',
@@ -543,7 +587,7 @@ export class App {
           serviceOpt1: 'Laundry Pickup & Delivery',
           serviceOpt2: 'Wash & Fold Express',
           serviceOpt3: 'Home Cleaning',
-          serviceOpt4: 'Student Package',
+          serviceOpt4: 'Subscription Package',
           serviceOpt5: 'Other',
           messageLabel: 'Message',
           messagePlaceholder: 'Approximately how many pounds? Any scent preferences?',
