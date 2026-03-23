@@ -53,8 +53,8 @@ export class App {
     es: {
       nav: { home: 'Inicio', services: 'Lavandería', cleaning: 'Limpieza', laundry: 'Recogida', about: 'Nosotros', products: 'Productos', contact: 'Contacto', callNow: 'Llamar Ahora' },
       hero: {
-        title1: 'Servicios de Lavandería',
-        titleAccent: 'y Limpieza Natural',
+        title1: 'Limpieza Natural &',
+        titleAccent: 'Servicios de Lavandería',
         tagline: 'Limpieza Ecológica para Hogares y Ropa',
         subtitle: 'Recogemos, lavamos con productos 100% naturales y entregamos tu ropa fresca y limpia. También limpiamos hogares y apartamentos.',
         hsi1: 'Limpieza de Apartamentos',
@@ -108,13 +108,13 @@ export class App {
         eco:      { tag: 'Natural & Eco-Friendly', title: 'Productos Seguros para tu Familia y el Planeta', lead: 'Usamos recetas orgánicas y fórmulas desinfectantes de la cultura maya de Olga. Seguros para niños, mascotas y el medio ambiente.', f1: 'Sin químicos agresivos', f2: 'Biodegradables y sostenibles', f3: 'Aromas naturales de lavanda y eucalipto', save: '¡Ahorra en tu primer servicio!', cta: '📞 Llamar o Escribir Hoy', badgeTitle: 'Safe & Green', badgeSub: '100% Natural' },
       },
       boston: { tag: '📍 Sirviendo al Área de Boston', title: 'Limpieza Segura y Verde', sub: 'Usamos productos naturales que son seguros para tu familia y el planeta.', save: '¡Ahorra en tu primer servicio. Llama o escribe hoy!', callLabel: 'Llamar o Escribir:', note: 'Respondemos en menos de 2 horas' },
-      footer: { tagline: 'Cleaning Earth One Home at a Time!', slogan: 'Ropa Fresca, Vida Natural', servicesTitle: 'Servicios', companyTitle: 'Empresa', contactTitle: 'Contacto', ourStory: 'Nuestra Historia', ingredients: 'Ingredientes', copyright: '© 2026 PIOX & L Natural Cleaning. Todos los derechos reservados.', eco: 'Eco-Friendly', insured: 'Asegurado', minority: 'Minority-Owned Business' }
+      footer: { tagline: 'Cleaning Earth One Home at a Time!', slogan: 'Ropa Fresca, Vida Natural', servicesTitle: 'Servicios', companyTitle: 'Empresa', contactTitle: 'Contacto', ourStory: 'Nuestra Historia', ingredients: 'Ingredientes', copyright: '© 2025 PIOX & L Natural Cleaning. Todos los derechos reservados.', eco: 'Eco-Friendly', insured: 'Asegurado', minority: 'Minority-Owned Business' }
     },
     en: {
       nav: { home: 'Home', services: 'Services', cleaning: 'Cleaning', laundry: 'Laundry', about: 'About', products: 'Products', contact: 'Contact', callNow: 'Call Now' },
       hero: {
-        title1: 'Natural Cleaning &',
-        titleAccent: 'Laundry Services',
+        title1: 'Laundry Services &',
+        titleAccent: 'Natural Cleaning',
         tagline: 'Eco-Friendly Cleaning & Laundry Services',
         subtitle: 'We pick up, wash with 100% natural products, and deliver your clothes fresh and clean. We also clean homes and apartments.',
         hsi1: 'Apartment Cleaning',
@@ -168,7 +168,7 @@ export class App {
         eco:      { tag: 'Natural & Eco-Friendly', title: 'Safe & Green Cleaning for Your Family', lead: 'We use organic recipes and disinfectant formulas rooted in Olga\'s Mayan culture. Safe for kids, pets, and the environment.', f1: 'No harsh chemicals', f2: 'Biodegradable & sustainable', f3: 'Natural lavender & eucalyptus aromas', save: 'Save on your first service!', cta: '📞 Call or Text Today', badgeTitle: 'Safe & Green', badgeSub: '100% Natural' },
       },
       boston: { tag: '📍 Serving the Boston Area', title: 'Safe & Green Cleaning', sub: 'We use natural products that are safe for your family and the planet.', save: 'Save on your first service. Call or text today!', callLabel: 'Call or Text:', note: 'We respond in less than 2 hours' },
-      footer: { tagline: 'Cleaning Earth One Home at a Time!', slogan: 'Fresh Clothes, Natural Life', servicesTitle: 'Services', companyTitle: 'Company', contactTitle: 'Contact', ourStory: 'Our Story', ingredients: 'Ingredients', copyright: '© 2026 PIOX & L Natural Cleaning. All rights reserved.', eco: 'Eco-Friendly', insured: 'Insured', minority: 'Minority-Owned Business' }
+      footer: { tagline: 'Cleaning Earth One Home at a Time!', slogan: 'Fresh Clothes, Natural Life', servicesTitle: 'Services', companyTitle: 'Company', contactTitle: 'Contact', ourStory: 'Our Story', ingredients: 'Ingredients', copyright: '© 2025 PIOX & L Natural Cleaning. All rights reserved.', eco: 'Eco-Friendly', insured: 'Insured', minority: 'Minority-Owned Business' }
     }
   };
 
