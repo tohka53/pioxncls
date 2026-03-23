@@ -1,199 +1,145 @@
-// Fonts are loaded via index.html for better performance
+/* ============================================
+   GLOBAL STYLES — Lavender & Piox
+   CSS variables must live here (global scope)
+   ============================================ */
 
 :root {
-  --color-lavender: #9B7BB8;
-  --color-lavender-light: #C4A8D8;
-  --color-lavender-dark: #6B4D82;
-  --color-gold: #C9A227;
-  --color-gold-light: #E8C547;
-  --color-cream: #FAF8F5;
-  --color-sage: #8FA87A;
-  --color-sage-dark: #5D7050;
-  --color-earth: #8B7355;
-  --color-earth-dark: #5C4D3A;
-  --color-charcoal: #2C2C2C;
-  --color-white: #FFFFFF;
-
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 6rem;
-
-  --transition-fast: 0.2s ease;
-  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  --purple:        #7C3AED;
+  --purple-dark:   #5B21B6;
+  --purple-deeper: #3B0764;
+  --purple-light:  #C4B5FD;
+  --purple-xlight: #F5F0FF;
+  --green:         #16A34A;
+  --green-dark:    #14532D;
+  --green-light:   #BBF7D0;
+  --green-xlight:  #F0FDF4;
+  --cream:         #FFFBF5;
+  --white:         #FFFFFF;
+  --text-dark:     #1C1917;
+  --text-mid:      #374151;
+  --text-soft:     #6B7280;
+  --gold:          #D97706;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* BUTTONS */
+a.btn-primary, button.btn-primary, .btn-primary {
+  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  color: #ffffff !important; border: none !important; text-decoration: none !important;
+}
+a.btn-outline, .btn-outline {
+  background: transparent !important; color: #5B21B6 !important;
+  border: 2.5px solid #7C3AED !important; text-decoration: none !important;
+}
+a.btn-outline:hover { background: #7C3AED !important; color: #fff !important; }
+a.btn-outline-green, .btn-outline-green {
+  background: transparent !important; color: #14532D !important;
+  border: 2.5px solid #16A34A !important; text-decoration: none !important;
+}
+a.btn-outline-green:hover { background: #16A34A !important; color: #fff !important; }
+
+/* NAVBAR CTA */
+.navbar .nav-cta, .navbar a.nav-cta, .navbar a.btn-primary {
+  background: linear-gradient(135deg, #5B21B6, #7C3AED) !important;
+  color: #ffffff !important; border: none !important;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
+/* SERVICES FLYER HEADER */
+.sfh-purple { background: linear-gradient(135deg, #4C1D95, #7C3AED) !important; }
+.sfh-purple h3, .sfh-purple .sfh-icon { color: #ffffff !important; }
+.sfh-green  { background: linear-gradient(135deg, #14532D, #16A34A) !important; }
+.sfh-green h3, .sfh-green .sfh-icon { color: #ffffff !important; }
+.services-flyer-header .sfh-col h3 { color: #ffffff !important; }
 
-body {
-  font-family: var(--font-body);
-  background-color: var(--color-cream);
-  color: var(--color-charcoal);
-  line-height: 1.7;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* SPECIAL OFFER BADGE */
+.special-offer-badge { background: linear-gradient(135deg, #5B21B6, #7C3AED) !important; }
+.special-offer-badge .sob-eyebrow { color: rgba(255,255,255,.9) !important; }
+.special-offer-badge .sob-num     { color: #ffffff !important; }
+.special-offer-badge .sob-unit    { color: rgba(255,255,255,.9) !important; }
+.special-offer-badge .sob-only    { color: rgba(255,255,255,.85) !important; }
+.special-offer-badge .sob-amount  { color: #FBBF24 !important; }
+.special-offer-badge .sob-delivery{ color: #BBF7D0 !important; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  font-weight: 500;
-  line-height: 1.2;
-}
+/* PREVIEW CARDS */
+.preview-card.purple .pc-header { background: #EDE9FE !important; color: #5B21B6 !important; }
+.preview-card.purple .pc-price  { color: #5B21B6 !important; }
+.preview-card.green .pc-header  { background: #DCFCE7 !important; color: #14532D !important; }
+.preview-card.green .pc-price   { color: #14532D !important; }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: var(--transition-fast);
-}
+/* PROMO BAR */
+.promo-bar { background: linear-gradient(90deg, #14532D, #16A34A, #14532D) !important; }
+.promo-bar .promo-text { color: #ffffff !important; }
+.promo-bar .promo-cta  { background: #ffffff !important; color: #14532D !important; text-decoration: none !important; }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+/* QUOTE BAR */
+.quote-text { color: #5B21B6 !important; }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
+/* TRUST BAR */
+.trust-label { color: #1C1917 !important; }
 
-.text-center { text-align: center; }
-.text-lavender { color: var(--color-lavender); }
-.text-gold { color: var(--color-gold); }
-.text-sage { color: var(--color-sage-dark); }
+/* FEATURES BANNER */
+.features-banner .feature-item:nth-child(1) { background: #4C1D95 !important; }
+.features-banner .feature-item:nth-child(2) { background: #6D28D9 !important; }
+.features-banner .feature-item:nth-child(3) { background: #166534 !important; }
+.features-banner .feature-item:nth-child(4) { background: #16A34A !important; }
+.features-banner .feature-text { color: #ffffff !important; }
+.features-banner .feature-icon { color: #ffffff !important; }
 
-.btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: var(--transition-smooth);
-  
-  &-primary {
-    background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-lavender-dark) 100%);
-    color: var(--color-white);
-    box-shadow: 0 4px 20px rgba(155, 123, 184, 0.3);
-    
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(155, 123, 184, 0.4);
-    }
-  }
-  
-  &-outline {
-    background: transparent;
-    color: var(--color-lavender-dark);
-    border: 2px solid var(--color-lavender);
-    
-    &:hover {
-      background: var(--color-lavender);
-      color: var(--color-white);
-    }
-  }
-  
-  &-gold {
-    background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
-    color: var(--color-charcoal);
-    box-shadow: 0 4px 20px rgba(201, 162, 39, 0.3);
-    
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(201, 162, 39, 0.4);
-    }
-  }
-}
+/* FEATURED BADGE on service cards */
+.featured-badge { background: linear-gradient(135deg, #5B21B6, #A855F7) !important; color: #ffffff !important; }
 
-.section {
-  padding: var(--spacing-xl) 0;
-  
-  &-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-earth-dark);
-  }
-  
-  &-subtitle {
-    font-size: 1.125rem;
-    color: var(--color-sage-dark);
-    max-width: 600px;
-    margin: 0 auto var(--spacing-lg);
-  }
-}
+/* ECO CARD */
+.eco-card { background: linear-gradient(135deg, #14532D, #16A34A) !important; }
+.eco-card h3, .eco-card p, .eco-card .eco-icon { color: #ffffff !important; }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* SOCIAL LINKS */
+.social-link { background: linear-gradient(135deg, #5B21B6, #7C3AED) !important; color: #ffffff !important; }
+.social-link svg { fill: #ffffff !important; color: #ffffff !important; }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+/* CONTACT */
+.contact-method   { border-left-color: #7C3AED !important; }
+.method-label     { color: #7C3AED !important; }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
+/* ABOUT BADGE */
+.about-badge { background: linear-gradient(135deg, #5B21B6, #7C3AED) !important; color: #ffffff !important; }
+.about-badge .badge-text, .about-badge .badge-icon { color: #ffffff !important; }
 
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
+/* HERO */
+.hero-starting { color: #14532D !important; }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s var(--transition-smooth) forwards;
-}
+/* FOOTER */
+.footer { background: linear-gradient(160deg, #1E0858 0%, #1C1917 60%, #052E16 100%) !important; }
+.footer, .footer p, .footer li, .footer a { color: rgba(255,255,255,.75); }
+.footer-column h4 { color: #86EFAC !important; }
+.footer-tagline   { color: #C4B5FD !important; }
+.footer-bottom p  { color: rgba(255,255,255,.65) !important; }
 
-.animate-fade-in {
-  animation: fadeIn 1s ease forwards;
-}
+/* LOGO — Piox & L */
+.logo-piox { color: #3B0764 !important; font-family: Georgia, serif !important; font-weight: 700 !important; }
+.logo-amp  { color: #6B7280 !important; font-style: italic !important; }
+.logo-accent { color: #7C3AED !important; font-style: italic !important; }
+.logo-sub  { color: #6B7280 !important; }
+.footer .logo-piox  { color: #ffffff !important; }
+.footer .logo-amp   { color: rgba(255,255,255,.55) !important; }
+.footer .logo-accent{ color: #C4B5FD !important; }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
+/* FEATURE SPLIT SECTIONS */
+.fs-tag--purple { background: #EDE9FE !important; color: #5B21B6 !important; }
+.fs-tag--green  { background: #DCFCE7 !important; color: #14532D !important; }
+.fs-check { background: #EDE9FE !important; color: #5B21B6 !important; }
+.fs-check--green { background: #DCFCE7 !important; color: #14532D !important; }
+.fs-price { color: #5B21B6 !important; }
+.fs-price--green { color: #14532D !important; }
+.fs-save  { color: #16A34A !important; }
+.fs-photo-badge--purple { background: linear-gradient(135deg,#5B21B6,#7C3AED) !important; color:#fff !important; }
+.fs-photo-badge--green  { background: linear-gradient(135deg,#14532D,#16A34A) !important; color:#fff !important; }
+.fs-photo-badge .fpb-title, .fs-photo-badge .fpb-sub { color: #fff !important; }
 
-::-webkit-scrollbar-track {
-  background: var(--color-cream);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-lavender-light);
-  border-radius: 5px;
-  
-  &:hover {
-    background: var(--color-lavender);
-  }
-}
-
-::selection {
-  background: var(--color-lavender-light);
-  color: var(--color-white);
-}
+/* BOSTON CTA */
+.boston-phone-btn { background: #16A34A !important; color: #fff !important; text-decoration: none !important; }
+.boston-phone-btn:hover { background: #15803D !important; color: #fff !important; }
+.boston-phone-btn .bpb-label, .boston-phone-btn .bpb-number { color: #fff !important; }
+.boston-title { color: #fff !important; }
+.boston-sub   { color: rgba(255,255,255,.88) !important; }
+.boston-save  { color: #86EFAC !important; }
+.boston-note  { color: rgba(255,255,255,.7) !important; }
+.boston-tag   { color: #fff !important; }

@@ -2,94 +2,150 @@
 <nav class="navbar" [class.scrolled]="isScrolled">
   <div class="container navbar-container">
     <a href="#" class="logo">
-      <span class="logo-icon">🪻</span>
-      <span class="logo-text">Lavender & <span class="logo-accent">Piox</span></span>
+      <img src="/pioxlogo.jpeg" alt="Piox & L Natural Cleaning" class="logo-img">
     </a>
-    
     <ul class="nav-links" [class.active]="menuOpen">
-      <li><a href="#home" (click)="closeMenu()">{{ t.nav.home }}</a></li>
-      <li><a href="#services" (click)="closeMenu()">{{ t.nav.services }}</a></li>
-      <li><a href="#about" (click)="closeMenu()">{{ t.nav.about }}</a></li>
-      <li><a href="#products" (click)="closeMenu()">{{ t.nav.products }}</a></li>
-      <li><a href="#contact" (click)="closeMenu()">{{ t.nav.contact }}</a></li>
+      <li><a href="#home"           (click)="closeMenu()">{{ t.nav.home }}</a></li>
+      <li><a href="#services"       (click)="closeMenu()">{{ t.nav.services }}</a></li>
+      <li><a href="#cleaning"       (click)="closeMenu()">{{ t.nav.cleaning }}</a></li>
+      <li><a href="#laundry-service"(click)="closeMenu()">{{ t.nav.laundry }}</a></li>
+      <li><a href="#about"          (click)="closeMenu()">{{ t.nav.about }}</a></li>
+      <li><a href="#contact"        (click)="closeMenu()">{{ t.nav.contact }}</a></li>
     </ul>
-    
     <div class="nav-actions">
-      <!-- Language Toggle Button 
-      <button class="lang-toggle" (click)="toggleLanguage()" [attr.aria-label]="currentLang === 'es' ? 'Switch to English' : 'Cambiar a Español'">
-        <span class="lang-flag">{{ currentLang === 'es' ? '🇺🇸' : '🇬🇹' }}</span>
-        <span class="lang-text">{{ currentLang === 'es' ? 'EN' : 'ES' }}</span>
-      </button>-->
-      
       <a href="tel:+16178886131" class="nav-cta btn btn-primary">{{ t.nav.callNow }}</a>
     </div>
-    
     <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
 <!-- Hero Section -->
 <section id="home" class="hero">
-  <div class="hero-bg">
-    <div class="hero-pattern"></div>
-    <div class="hero-gradient"></div>
-  </div>
-  
   <div class="container hero-content">
+    <!-- LEFT: text -->
     <div class="hero-text">
-      <span class="hero-badge">{{ t.hero.badge }}</span>
       <h1 class="hero-title">
-        {{ t.hero.title1 }}
+        {{ t.hero.title1 }}<br>
         <span class="title-accent">{{ t.hero.titleAccent }}</span>
-        {{ t.hero.title2 }}
       </h1>
+      <p class="hero-tagline">{{ t.hero.tagline }}</p>
       <p class="hero-subtitle">{{ t.hero.subtitle }}</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">{{ t.hero.cta1 }}</a>
-        <a href="#services" class="btn btn-outline">{{ t.hero.cta2 }}</a>
+
+      <!-- Service icons row like flyer -->
+      <div class="hero-service-icons">
+        <div class="hsi-item">
+          <span class="hsi-icon">🏠</span>
+          <span class="hsi-label">{{ t.hero.hsi1 }}</span>
+        </div>
+        <div class="hsi-divider"></div>
+        <div class="hsi-item">
+          <span class="hsi-icon">🧺</span>
+          <span class="hsi-label">{{ t.hero.hsi2 }}</span>
+        </div>
+        <div class="hsi-divider"></div>
+        <div class="hsi-item">
+          <span class="hsi-icon">🚗</span>
+          <span class="hsi-label">{{ t.hero.hsi3 }}</span>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">{{ t.hero.stat1Label }}</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">500+</span>
-          <span class="stat-label">{{ t.hero.stat2Label }}</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">$2</span>
-          <span class="stat-label">{{ t.hero.stat3Label }}</span>
-        </div>
+
+      <p class="hero-starting">{{ t.hero.startingAt }}</p>
+
+      <div class="hero-ctas">
+        <a href="tel:+16178886131" class="btn btn-primary">{{ t.hero.cta1 }}</a>
+        <a href="#services"        class="btn btn-outline">{{ t.hero.cta2 }}</a>
       </div>
     </div>
-    
+
+    <!-- RIGHT: special offer + mini cards -->
     <div class="hero-visual">
-      <div class="hero-image-container">
-        <div class="floating-elements">
-          <div class="float-item lavender">🪻</div>
-          <div class="float-item leaf">👕</div>
-          <div class="float-item citrus">🌿</div>
-          <div class="float-item flower">✨</div>
+      <!-- Special Offer circle from flyer -->
+      <div class="special-offer-badge">
+        <span class="sob-eyebrow">{{ t.hero.offerEyebrow }}</span>
+        <div class="sob-bags">
+          <span class="sob-num">3</span>
+          <span class="sob-unit">{{ t.hero.offerUnit }}</span>
         </div>
-        <div class="hero-card">
-          <div class="card-icon">🚗</div>
-          <h3>{{ t.hero.cardTitle }}</h3>
-          <p>{{ t.hero.cardText }}</p>
+        <div class="sob-price-row">
+          <span class="sob-only">{{ t.hero.offerOnly }}</span>
+          <span class="sob-amount">$90</span>
+        </div>
+        <span class="sob-delivery">{{ t.hero.offerDelivery }}</span>
+      </div>
+
+      <!-- Two-column preview cards like flyer -->
+      <div class="hero-preview-grid">
+        <div class="preview-card purple">
+          <div class="pc-header">🏠 {{ t.hero.card1Title }}</div>
+          <ul>
+            <li>{{ t.hero.card1f1 }}</li>
+            <li>{{ t.hero.card1f2 }}</li>
+            <li>{{ t.hero.card1f3 }}</li>
+          </ul>
+          <span class="pc-price">{{ t.hero.card1Price }}</span>
+        </div>
+        <div class="preview-card green">
+          <div class="pc-header">🧺 {{ t.hero.card2Title }}</div>
+          <ul>
+            <li>{{ t.hero.card2f1 }}</li>
+            <li>{{ t.hero.card2f2 }}</li>
+            <li>{{ t.hero.card2f3 }}</li>
+          </ul>
+          <span class="pc-price">{{ t.hero.card2Price }}</span>
         </div>
       </div>
     </div>
   </div>
-  
+
   <div class="scroll-indicator">
     <span>{{ t.hero.scrollIndicator }}</span>
     <div class="scroll-arrow"></div>
   </div>
 </section>
+
+<!-- 20% OFF Promo Bar — green band from flyer -->
+<div class="promo-bar">
+  <div class="container promo-container">
+    <span class="promo-text">{{ t.hero.promo }}</span>
+    <a href="#contact" class="promo-cta">{{ t.hero.promoCta }}</a>
+  </div>
+</div>
+
+<!-- "Call or Text for a Free Quote" with decorative lines — from flyer -->
+<div class="quote-bar">
+  <div class="container quote-inner">
+    <div class="quote-line"></div>
+    <a href="tel:+16178886131" class="quote-text">📞 {{ t.hero.quoteBar }}</a>
+    <div class="quote-line"></div>
+  </div>
+</div>
+
+<!-- Trust Badges: Fully Insured · Eco-Friendly · Satisfaction Guaranteed — from flyer bottom -->
+<div class="trust-bar">
+  <div class="container trust-inner">
+    <div class="trust-item">
+      <span class="trust-icon trust-green">✅</span>
+      <span class="trust-label">{{ t.trust.insured }}</span>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <span class="trust-icon trust-green">🌱</span>
+      <span class="trust-label">{{ t.trust.eco }}</span>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <span class="trust-icon trust-purple">⭐</span>
+      <span class="trust-label">{{ t.trust.satisfaction }}</span>
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <span class="trust-icon trust-purple">🏆</span>
+      <span class="trust-label">{{ t.trust.minority }}</span>
+    </div>
+  </div>
+</div>
 
 <!-- Features Banner -->
 <section class="features-banner">
@@ -120,17 +176,26 @@
   <div class="container">
     <div class="section-header text-center">
       <span class="section-tag">{{ t.services.tag }}</span>
-      <h2 class="section-title">{{ t.services.title1 }} <br><span class="text-lavender">{{ t.services.title2 }}</span></h2>
+      <h2 class="section-title">{{ t.services.title1 }}<br><span class="text-lavender">{{ t.services.title2 }}</span></h2>
       <p class="section-subtitle">{{ t.services.subtitle }}</p>
     </div>
-    
+
+    <!-- Flyer-style 2-column section header: HOUSE CLEANING | LAUNDRY SERVICE -->
+    <div class="services-flyer-header">
+      <div class="sfh-col sfh-purple">
+        <span class="sfh-icon">🏠</span>
+        <h3>{{ t.services.flyerHouseTitle }}</h3>
+      </div>
+      <div class="sfh-col sfh-green">
+        <span class="sfh-icon">🧺</span>
+        <h3>{{ t.services.flyerLaundryTitle }}</h3>
+      </div>
+    </div>
+
     <div class="services-grid">
-      <!-- Laundry Pickup - Primary Service -->
       <div class="service-card featured service-purple">
         <div class="featured-badge">{{ t.services.deep.badge }}</div>
-        <div class="service-icon">
-          <span>🪻</span>
-        </div>
+        <div class="service-icon"><span>🪻</span></div>
         <h3>{{ t.services.residential.title }}</h3>
         <p>{{ t.services.residential.description }}</p>
         <ul class="service-features">
@@ -140,12 +205,9 @@
         </ul>
         <span class="service-price">{{ t.services.residential.price }}</span>
       </div>
-      
-      <!-- Wash & Fold Express -->
+
       <div class="service-card service-purple">
-        <div class="service-icon">
-          <span>⚡</span>
-        </div>
+        <div class="service-icon"><span>⚡</span></div>
         <h3>{{ t.services.deep.title }}</h3>
         <p>{{ t.services.deep.description }}</p>
         <ul class="service-features">
@@ -155,12 +217,9 @@
         </ul>
         <span class="service-price">{{ t.services.deep.price }}</span>
       </div>
-      
-      <!-- Home Cleaning -->
+
       <div class="service-card service-green">
-        <div class="service-icon service-icon--green">
-          <span>🏠</span>
-        </div>
+        <div class="service-icon service-icon--green"><span>🏠</span></div>
         <h3>{{ t.services.laundry.title }}</h3>
         <p>{{ t.services.laundry.description }}</p>
         <ul class="service-features">
@@ -170,12 +229,9 @@
         </ul>
         <span class="service-price service-price--green">{{ t.services.laundry.price }}</span>
       </div>
-      
-      <!-- Subscription Package -->
+
       <div class="service-card service-green">
-        <div class="service-icon service-icon--green">
-          <span>🌿</span>
-        </div>
+        <div class="service-icon service-icon--green"><span>🌿</span></div>
         <h3>{{ t.services.commercial.title }}</h3>
         <p>{{ t.services.commercial.description }}</p>
         <ul class="service-features">
@@ -185,6 +241,151 @@
         </ul>
         <span class="service-price service-price--green">{{ t.services.commercial.price }}</span>
       </div>
+    </div>
+
+    <div class="services-cta-row">
+      <a href="tel:+16178886131" class="btn btn-primary">{{ t.services.bookCta }}</a>
+      <a href="#contact"         class="btn btn-outline-green">{{ t.services.quoteCta }}</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     APARTMENT CLEANING FEATURE SECTION
+     ============================================= -->
+<section id="cleaning" class="feature-split section">
+  <div class="container">
+    <div class="fs-grid fs-grid--reverse">
+      <div class="fs-content">
+        <span class="fs-tag fs-tag--purple">{{ t.split.cleaning.tag }}</span>
+        <h2 class="fs-title">{{ t.split.cleaning.title }}</h2>
+        <p class="fs-lead">{{ t.split.cleaning.lead }}</p>
+        <ul class="fs-list">
+          <li><span class="fs-check">✓</span> {{ t.split.cleaning.f1 }}</li>
+          <li><span class="fs-check">✓</span> {{ t.split.cleaning.f2 }}</li>
+          <li><span class="fs-check">✓</span> {{ t.split.cleaning.f3 }}</li>
+          <li><span class="fs-check">✓</span> {{ t.split.cleaning.f4 }}</li>
+        </ul>
+        <p class="fs-price">{{ t.split.cleaning.price }}</p>
+        <a href="tel:+16178886131" class="btn btn-primary">{{ t.split.cleaning.cta }}</a>
+      </div>
+      <div class="fs-visual">
+        <img
+          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80"
+          alt="Sparkling clean apartment living room"
+          class="fs-photo">
+        <div class="fs-photo-badge fs-photo-badge--purple">
+          <span class="fpb-icon">🏠</span>
+          <div>
+            <span class="fpb-title">{{ t.split.cleaning.badgeTitle }}</span>
+            <span class="fpb-sub">{{ t.split.cleaning.badgeSub }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     LAUNDRY SERVICE FEATURE SECTION
+     ============================================= -->
+<section id="laundry-service" class="feature-split feature-split--green section">
+  <div class="container">
+    <div class="fs-grid">
+      <div class="fs-visual">
+        <div class="fs-photo-stack">
+          <img
+            src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=800&q=80"
+            alt="Fresh folded laundry in basket"
+            class="fs-photo fs-photo--main">
+          <img
+            src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&q=80"
+            alt="Natural cleaning products"
+            class="fs-photo fs-photo--accent">
+        </div>
+      </div>
+      <div class="fs-content">
+        <span class="fs-tag fs-tag--green">{{ t.split.laundry.tag }}</span>
+        <h2 class="fs-title">{{ t.split.laundry.title }}</h2>
+        <p class="fs-lead">{{ t.split.laundry.lead }}</p>
+        <ul class="fs-list">
+          <li><span class="fs-check fs-check--green">✓</span> {{ t.split.laundry.f1 }}</li>
+          <li><span class="fs-check fs-check--green">✓</span> {{ t.split.laundry.f2 }}</li>
+          <li><span class="fs-check fs-check--green">✓</span> {{ t.split.laundry.f3 }}</li>
+          <li><span class="fs-check fs-check--green">✓</span> {{ t.split.laundry.f4 }}</li>
+        </ul>
+        <p class="fs-price fs-price--green">{{ t.split.laundry.price }}</p>
+        <a href="tel:+16178886131" class="btn btn-outline-green">{{ t.split.laundry.cta }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     NATURAL & ECO-FRIENDLY PRODUCTS SECTION
+     ============================================= -->
+<section id="eco" class="feature-split section">
+  <div class="container">
+    <div class="fs-grid fs-grid--reverse">
+      <div class="fs-content">
+        <span class="fs-tag fs-tag--green">{{ t.split.eco.tag }}</span>
+        <h2 class="fs-title">{{ t.split.eco.title }}</h2>
+        <p class="fs-lead">{{ t.split.eco.lead }}</p>
+        <ul class="fs-list">
+          <li><span class="fs-check fs-check--green">✓</span> {{ t.split.eco.f1 }}</li>
+          <li><span class="fs-check fs-check--green">✓</span> {{ t.split.eco.f2 }}</li>
+          <li><span class="fs-check fs-check--green">✓</span> {{ t.split.eco.f3 }}</li>
+        </ul>
+        <div class="fs-cta-group">
+          <p class="fs-save">{{ t.split.eco.save }}</p>
+          <a href="tel:+16178886131" class="btn btn-primary">{{ t.split.eco.cta }}</a>
+        </div>
+      </div>
+      <div class="fs-visual">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+          alt="Natural eco-friendly cleaning products"
+          class="fs-photo">
+        <div class="fs-photo-badge fs-photo-badge--green">
+          <span class="fpb-icon">🌿</span>
+          <div>
+            <span class="fpb-title">{{ t.split.eco.badgeTitle }}</span>
+            <span class="fpb-sub">{{ t.split.eco.badgeSub }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     BOSTON CTA SECTION — Safe & Green Cleaning
+     ============================================= -->
+<section class="boston-cta">
+  <div class="boston-cta-bg">
+    <img
+      src="https://images.unsplash.com/photo-1501979376754-f53870a3e9d7?w=1600&q=80"
+      alt="Boston skyline"
+      class="boston-bg-img">
+    <div class="boston-overlay"></div>
+  </div>
+  <div class="container boston-content">
+    <div class="boston-text">
+      <span class="boston-tag">{{ t.boston.tag }}</span>
+      <h2 class="boston-title">{{ t.boston.title }}</h2>
+      <p class="boston-sub">{{ t.boston.sub }}</p>
+      <p class="boston-save">{{ t.boston.save }}</p>
+    </div>
+    <div class="boston-action">
+      <a href="tel:+16178886131" class="boston-phone-btn">
+        <span class="bpb-icon">📞</span>
+        <div class="bpb-text">
+          <span class="bpb-label">{{ t.boston.callLabel }}</span>
+          <span class="bpb-number">617-888-6131</span>
+        </div>
+      </a>
+      <p class="boston-note">{{ t.boston.note }}</p>
     </div>
   </div>
 </section>
@@ -211,33 +412,19 @@
           <span class="badge-text">{{ t.about.badge }}</span>
         </div>
       </div>
-      
       <div class="about-content">
         <span class="section-tag">{{ t.about.tag }}</span>
-        <h2 class="section-title">{{ t.about.title1 }} <br><span class="text-lavender">{{ t.about.title2 }}</span></h2>
+        <h2 class="section-title">{{ t.about.title1 }}<br><span class="text-lavender">{{ t.about.title2 }}</span></h2>
         <div class="about-text">
           <p [innerHTML]="t.about.text1"></p>
           <p>{{ t.about.text2 }}</p>
           <p>{{ t.about.text3 }}</p>
         </div>
-        
         <div class="values-grid">
-          <div class="value-item">
-            <span class="value-icon">🌿</span>
-            <span class="value-text">{{ t.about.value1 }}</span>
-          </div>
-          <div class="value-item">
-            <span class="value-icon">💜</span>
-            <span class="value-text">{{ t.about.value2 }}</span>
-          </div>
-          <div class="value-item">
-            <span class="value-icon">❤️</span>
-            <span class="value-text">{{ t.about.value3 }}</span>
-          </div>
-          <div class="value-item">
-            <span class="value-icon">🤝</span>
-            <span class="value-text">{{ t.about.value4 }}</span>
-          </div>
+          <div class="value-item"><span class="value-icon">🌿</span><span class="value-text">{{ t.about.value1 }}</span></div>
+          <div class="value-item"><span class="value-icon">💜</span><span class="value-text">{{ t.about.value2 }}</span></div>
+          <div class="value-item"><span class="value-icon">❤️</span><span class="value-text">{{ t.about.value3 }}</span></div>
+          <div class="value-item"><span class="value-icon">🤝</span><span class="value-text">{{ t.about.value4 }}</span></div>
         </div>
       </div>
     </div>
@@ -252,49 +439,13 @@
       <h2 class="section-title">{{ t.products.title1 }} <span class="text-gold">{{ t.products.title2 }}</span></h2>
       <p class="section-subtitle">{{ t.products.subtitle }}</p>
     </div>
-    
     <div class="products-showcase">
-      <div class="product-item">
-        <div class="product-visual lavender-visual">
-          <span class="product-emoji">💜</span>
-        </div>
-        <h4>{{ t.products.lavender.name }}</h4>
-        <p>{{ t.products.lavender.desc }}</p>
-      </div>
-      
-      <div class="product-item">
-        <div class="product-visual citrus-visual">
-          <span class="product-emoji">🍋</span>
-        </div>
-        <h4>{{ t.products.citrus.name }}</h4>
-        <p>{{ t.products.citrus.desc }}</p>
-      </div>
-      
-      <div class="product-item">
-        <div class="product-visual vinegar-visual">
-          <span class="product-emoji">🫗</span>
-        </div>
-        <h4>{{ t.products.vinegar.name }}</h4>
-        <p>{{ t.products.vinegar.desc }}</p>
-      </div>
-      
-      <div class="product-item">
-        <div class="product-visual baking-visual">
-          <span class="product-emoji">🧂</span>
-        </div>
-        <h4>{{ t.products.baking.name }}</h4>
-        <p>{{ t.products.baking.desc }}</p>
-      </div>
-      
-      <div class="product-item">
-        <div class="product-visual flower-visual">
-          <span class="product-emoji">🌺</span>
-        </div>
-        <h4>{{ t.products.flower.name }}</h4>
-        <p>{{ t.products.flower.desc }}</p>
-      </div>
+      <div class="product-item"><div class="product-visual lavender-visual"><span class="product-emoji">💜</span></div><h4>{{ t.products.lavender.name }}</h4><p>{{ t.products.lavender.desc }}</p></div>
+      <div class="product-item"><div class="product-visual citrus-visual"><span class="product-emoji">🍋</span></div><h4>{{ t.products.citrus.name }}</h4><p>{{ t.products.citrus.desc }}</p></div>
+      <div class="product-item"><div class="product-visual vinegar-visual"><span class="product-emoji">🫗</span></div><h4>{{ t.products.vinegar.name }}</h4><p>{{ t.products.vinegar.desc }}</p></div>
+      <div class="product-item"><div class="product-visual baking-visual"><span class="product-emoji">🧂</span></div><h4>{{ t.products.baking.name }}</h4><p>{{ t.products.baking.desc }}</p></div>
+      <div class="product-item"><div class="product-visual flower-visual"><span class="product-emoji">🌺</span></div><h4>{{ t.products.flower.name }}</h4><p>{{ t.products.flower.desc }}</p></div>
     </div>
-    
     <div class="eco-commitment">
       <div class="eco-card">
         <div class="eco-icon">👕</div>
@@ -307,118 +458,58 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
+<!-- Testimonials -->
 <section class="testimonials section">
   <div class="container">
     <div class="section-header text-center">
       <span class="section-tag">{{ t.testimonials.tag }}</span>
       <h2 class="section-title">{{ t.testimonials.title1 }} <span class="text-lavender">{{ t.testimonials.title2 }}</span></h2>
     </div>
-    
     <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">{{ t.testimonials.testimonial1.text }}</p>
-        <div class="testimonial-author">
-          <span class="author-name">{{ t.testimonials.testimonial1.name }}</span>
-          <span class="author-location">📍 {{ t.testimonials.testimonial1.location }}</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">{{ t.testimonials.testimonial2.text }}</p>
-        <div class="testimonial-author">
-          <span class="author-name">{{ t.testimonials.testimonial2.name }}</span>
-          <span class="author-location">📍 {{ t.testimonials.testimonial2.location }}</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">{{ t.testimonials.testimonial3.text }}</p>
-        <div class="testimonial-author">
-          <span class="author-name">{{ t.testimonials.testimonial3.name }}</span>
-          <span class="author-location">📍 {{ t.testimonials.testimonial3.location }}</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">{{ t.testimonials.testimonial4.text }}</p>
-        <div class="testimonial-author">
-          <span class="author-name">{{ t.testimonials.testimonial4.name }}</span>
-          <span class="author-location">📍 {{ t.testimonials.testimonial4.location }}</span>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">{{ t.testimonials.testimonial5.text }}</p>
-        <div class="testimonial-author">
-          <span class="author-name">{{ t.testimonials.testimonial5.name }}</span>
-          <span class="author-location">📍 {{ t.testimonials.testimonial5.location }}</span>
-        </div>
-      </div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">{{ t.testimonials.testimonial1.text }}</p><div class="testimonial-author"><span class="author-name">{{ t.testimonials.testimonial1.name }}</span><span class="author-location">📍 {{ t.testimonials.testimonial1.location }}</span></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">{{ t.testimonials.testimonial2.text }}</p><div class="testimonial-author"><span class="author-name">{{ t.testimonials.testimonial2.name }}</span><span class="author-location">📍 {{ t.testimonials.testimonial2.location }}</span></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">{{ t.testimonials.testimonial3.text }}</p><div class="testimonial-author"><span class="author-name">{{ t.testimonials.testimonial3.name }}</span><span class="author-location">📍 {{ t.testimonials.testimonial3.location }}</span></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">{{ t.testimonials.testimonial4.text }}</p><div class="testimonial-author"><span class="author-name">{{ t.testimonials.testimonial4.name }}</span><span class="author-location">📍 {{ t.testimonials.testimonial4.location }}</span></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><p class="testimonial-text">{{ t.testimonials.testimonial5.text }}</p><div class="testimonial-author"><span class="author-name">{{ t.testimonials.testimonial5.name }}</span><span class="author-location">📍 {{ t.testimonials.testimonial5.location }}</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section id="contact" class="contact section">
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info">
         <span class="section-tag">{{ t.contact.tag }}</span>
-        <h2 class="section-title">{{ t.contact.title1 }} <br>{{ t.contact.title2 }} <span class="text-lavender">{{ t.contact.title3 }}</span></h2>
+        <h2 class="section-title">{{ t.contact.title1 }}<br>{{ t.contact.title2 }} <span class="text-lavender">{{ t.contact.title3 }}</span></h2>
         <p class="contact-description">{{ t.contact.description }}</p>
-        
         <div class="contact-methods">
           <a href="tel:+16178886131" class="contact-method">
             <span class="method-icon">📱</span>
-            <div class="method-details">
-              <span class="method-label">{{ t.contact.phoneLabel }}</span>
-              <span class="method-value">+1 (617) 888-6131</span>
-            </div>
+            <div class="method-details"><span class="method-label">{{ t.contact.phoneLabel }}</span><span class="method-value">+1 (617) 888-6131</span></div>
           </a>
-          
           <a href="mailto:pioxnaturalcleaning@gmail.com" class="contact-method">
             <span class="method-icon">✉️</span>
-            <div class="method-details">
-              <span class="method-label">{{ t.contact.emailLabel }}</span>
-              <span class="method-value">pioxnaturalcleaning&#64;gmail.com</span>
-            </div>
+            <div class="method-details"><span class="method-label">{{ t.contact.emailLabel }}</span><span class="method-value">pioxnaturalcleaning&#64;gmail.com</span></div>
           </a>
-          
           <div class="contact-method">
             <span class="method-icon">📍</span>
-            <div class="method-details">
-              <span class="method-label">{{ t.contact.locationLabel }}</span>
-              <span class="method-value">{{ t.contact.locationValue }}</span>
-            </div>
+            <div class="method-details"><span class="method-label">{{ t.contact.locationLabel }}</span><span class="method-value">{{ t.contact.locationValue }}</span></div>
           </div>
         </div>
-        
         <div class="social-links">
-          <a href="#" class="social-link" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-          <a href="#" class="social-link" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://wa.me/16178886131" class="social-link" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </a>
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="#" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://wa.me/16178886131" class="social-link" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
         </div>
       </div>
-      
+
       <div class="contact-form-wrapper">
         <form class="contact-form">
           <div class="form-group">
             <label for="name">{{ t.contact.form.nameLabel }}</label>
             <input type="text" id="name" name="name" required [placeholder]="t.contact.form.namePlaceholder">
           </div>
-          
           <div class="form-row">
             <div class="form-group">
               <label for="email">{{ t.contact.form.emailLabel }}</label>
@@ -429,7 +520,6 @@
               <input type="tel" id="phone" name="phone" [placeholder]="t.contact.form.phonePlaceholder">
             </div>
           </div>
-          
           <div class="form-group">
             <label for="service">{{ t.contact.form.serviceLabel }}</label>
             <select id="service" name="service">
@@ -441,12 +531,10 @@
               <option value="other">{{ t.contact.form.serviceOpt5 }}</option>
             </select>
           </div>
-          
           <div class="form-group">
             <label for="message">{{ t.contact.form.messageLabel }}</label>
             <textarea id="message" name="message" rows="4" [placeholder]="t.contact.form.messagePlaceholder"></textarea>
           </div>
-          
           <button type="submit" class="btn btn-primary btn-full">{{ t.contact.form.submit }}</button>
         </form>
       </div>
@@ -459,14 +547,12 @@
   <div class="container">
     <div class="footer-content">
       <div class="footer-brand">
-        <a href="#" class="logo">
-          <span class="logo-icon">🪻</span>
-          <span class="logo-text">Lavender & <span class="logo-accent">Piox</span></span>
+        <a href="#" class="logo footer-logo">
+          <img src="/pioxlogo.jpeg" alt="Piox & L Natural Cleaning" class="logo-img logo-img--footer">
         </a>
         <p class="footer-tagline">{{ t.footer.tagline }}</p>
         <p class="footer-slogan">{{ t.footer.slogan }}</p>
       </div>
-      
       <div class="footer-links">
         <div class="footer-column">
           <h4>{{ t.footer.servicesTitle }}</h4>
@@ -477,7 +563,6 @@
             <li><a href="#services">{{ t.services.commercial.title }}</a></li>
           </ul>
         </div>
-        
         <div class="footer-column">
           <h4>{{ t.footer.companyTitle }}</h4>
           <ul>
@@ -486,7 +571,6 @@
             <li><a href="#contact">{{ t.nav.contact }}</a></li>
           </ul>
         </div>
-        
         <div class="footer-column">
           <h4>{{ t.footer.contactTitle }}</h4>
           <ul>
@@ -497,7 +581,6 @@
         </div>
       </div>
     </div>
-    
     <div class="footer-bottom">
       <p>{{ t.footer.copyright }}</p>
       <p class="footer-certifications">
