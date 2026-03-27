@@ -12,9 +12,6 @@
       <li><a href="#about"          (click)="closeMenu()">{{ t.nav.about }}</a></li>
       <li><a href="#contact"        (click)="closeMenu()">{{ t.nav.contact }}</a></li>
     </ul>
-    <div class="nav-actions">
-      <a href="tel:+16178886131" class="nav-cta btn btn-primary">{{ t.nav.callNow }}</a>
-    </div>
     <button class="menu-toggle" (click)="toggleMenu()" [class.active]="menuOpen">
       <span></span><span></span><span></span>
     </button>
@@ -272,7 +269,7 @@
       </div>
       <div class="fs-visual">
         <img
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80"
+          src="/pioxcasa1.jpeg"
           alt="Sparkling clean apartment living room"
           class="fs-photo">
         <div class="fs-photo-badge fs-photo-badge--purple">
@@ -592,4 +589,3 @@
   </div>
 </footer>
 
-<router-outlet />

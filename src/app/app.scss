@@ -116,14 +116,14 @@ ul { list-style: none; }
   }
 }
 
-.navbar-container { display: flex; align-items: center; justify-content: space-between; }
+.navbar-container { display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 
 // Logo — image from public/pioxlogo.jpeg
 .logo {
-  display: flex; align-items: center; text-decoration: none;
+  display: flex; align-items: center; text-decoration: none; flex-shrink: 0;
 }
 .logo-img {
-  height: 65px;
+  height: 88px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -625,3 +625,7 @@ ul { list-style: none; }
 }
 
 .boston-note { font-size: .8125rem; color: rgba(255,255,255,.7); font-style: italic; }
+
+@media (max-width: 768px) {
+  .logo-img { height: 72px; }
+}
