@@ -216,522 +216,595 @@ export class App {
   menuOpen = false;
   currentLang: Language = 'en';
 
-  translations: Record<Language, Translations> = {
+translations: Record<Language, Translations> = {
+  es: {
+    nav: {
+      home: 'Inicio',
+      services: 'Servicios',
+      cleaning: 'Limpieza',
+      laundry: 'Lavandería',
+      about: 'Nosotros',
+      products: 'Productos',
+      contact: 'Contacto'
+    },
 
-    // ─────────────────────────────────────
-    // ESPAÑOL
-    // ─────────────────────────────────────
-    es: {
-      nav: {
-        home:     'Inicio',
-        services: 'Servicios',
-        cleaning: 'Limpieza',
-        laundry:  'Lavandería',
-        about:    'Nosotros',
-        products: 'Productos',
-        contact:  'Contacto'
+    hero: {
+      title1: 'Servicios de Lavandería y',
+      titleAccent: 'Limpieza Natural',
+      tagline: 'Servicios ecológicos de limpieza y lavandería',
+      subtitle:
+        'La mayoría de los hogares lava entre 9 y 18 kg de ropa cada semana. Nosotros la recogemos, la lavamos con productos 100% naturales y la entregamos fresca y perfectamente limpia. También ofrecemos limpieza profesional de hogares y apartamentos en Boston, Newton y Cambridge.',
+      hsi1: 'Limpieza de apartamentos',
+      hsi2: 'Lavado · Secado · Doblado',
+      hsi3: 'Recogida y entrega gratis',
+      startingAt: 'Desde $120',
+      cta1: '📞 Llamar o escribir',
+      cta2: 'Ver servicios',
+      scrollIndicator: 'Descubre más',
+      offerEyebrow: 'Oferta especial',
+      offerUnit: 'Bolsas de lavandería',
+      offerOnly: 'Solo',
+      offerDelivery: '¡Con entrega incluida!',
+      card1Title: 'Limpieza del hogar',
+      card1f1: 'Limpieza regular y profunda',
+      card1f2: 'Move-In / Move-Out',
+      card1f3: 'Productos naturales',
+      card1Price: 'Desde $120',
+      card2Title: 'Wash & Fold Express',
+      card2f1: 'Entrega en 24 a 48 horas',
+      card2f2: 'Doblado profesional',
+      card2f3: 'Seguro para telas delicadas',
+      card2Price: '$3.00/lb',
+      promo: '🎉 ¡20% de descuento en tu primer servicio!',
+      promoCta: 'Solicitar oferta',
+      quoteBar: '¡Llama o escribe para una cotización gratis!'
+    },
+
+    trust: {
+      insured: 'Totalmente asegurado',
+      eco: 'Productos ecológicos',
+      satisfaction: 'Satisfacción garantizada',
+      minority: 'Empresa de propiedad minoritaria'
+    },
+
+    features: {
+      organic: 'Productos naturales',
+      residential: 'Limpieza residencial',
+      laundry: 'Lavandería a domicilio',
+      eco: 'Eco-friendly'
+    },
+
+    services: {
+      tag: 'Nuestros servicios',
+      title1: 'Lavandería y limpieza',
+      title2: 'natural',
+      subtitle:
+        'Servicio profesional de lavandería con recogida y entrega, además de limpieza residencial usando únicamente productos naturales.',
+      flyerHouseTitle: 'Limpieza del hogar',
+      flyerLaundryTitle: 'Servicio de lavandería',
+      bookCta: '📞 Programar limpieza',
+      quoteCta: '🌿 Cotización gratis',
+
+      residential: {
+        title: 'Limpieza residencial',
+        description:
+          'Limpieza profesional de hogares y apartamentos utilizando productos naturales seguros.',
+        feature1: 'Limpieza regular y profunda',
+        feature2: 'Move-in / Move-out',
+        feature3: 'Productos 100% naturales',
+        price: 'Desde $120'
       },
 
-      hero: {
-        title1:          'Limpieza Natural &',
-        titleAccent:     'Servicios de Lavandería',
-        tagline:         'Limpieza Ecológica para Hogares y Ropa',
-        subtitle:        '¡La mayoría tenemos entre 9 y 18 kg de ropa para lavar cada semana! La recogemos, lavamos con productos 100% naturales y la entregamos fresca y limpia. También limpiamos hogares y apartamentos. Servicio en los vecindarios de Boston, Newton y Cambridge.',
-        hsi1:            'Limpieza de Apartamentos',
-        hsi2:            'Lavandería · Lavar · Secar · Doblar',
-        hsi3:            'Recogida y Entrega Gratis',
-        startingAt:      'Desde $120',
-        cta1:            '📞 Llamar o Escribir',
-        cta2:            'Ver Servicios',
-        scrollIndicator: 'Descubre más',
-        offerEyebrow:    'Oferta Especial',
-        offerUnit:       'Bolsas de Lavandería',
-        offerOnly:       'Solo',
-        offerDelivery:   '¡Con Entrega!',
-        card1Title:      'Limpieza del Hogar',
-        card1f1:         'Limpieza Regular y Profunda',
-        card1f2:         'Move-In / Move-Out',
-        card1f3:         'Productos Naturales',
-        card1Price:      'Desde $120',
-        card2Title:      'Wash & Fold Express',
-        card2f1:         'Entrega en 24-48 horas',
-        card2f2:         'Doblado profesional',
-        card2f3:         'Telas delicadas OK',
-        card2Price:      '$3.00/lb',
-        promo:           '🎉 ¡20% DE DESCUENTO en tu primer servicio de limpieza o lavandería!',
-        promoCta:        'Reclamar Oferta',
-        quoteBar:        '¡Llama o escribe para una cotización gratis!'
+      deep: {
+        badge: 'Más popular',
+        title: 'Wash & Fold Express',
+        description:
+          'Servicio ideal para profesionales y estudiantes ocupados, con entrega rápida garantizada.',
+        feature1: 'Entrega en 24 a 48 horas',
+        feature2: 'Doblado profesional',
+        feature3: 'Cuidado de telas delicadas',
+        price: '$3.00/lb'
       },
 
-      trust: {
-        insured:      'Totalmente Asegurado',
-        eco:          'Eco-Friendly',
-        satisfaction: 'Satisfacción Garantizada',
-        minority:     'Negocio Minority-Owned'
+      laundry: {
+        title: 'Lavandería a domicilio',
+        description:
+          'Recogemos tu ropa, la lavamos con jabones naturales y la entregamos fresca y limpia.',
+        feature1: 'Recogida y entrega gratis',
+        feature2: 'Lavado con productos naturales',
+        feature3: 'Opciones con o sin fragancia',
+        price: '$2.00/lb'
       },
 
-      features: {
-        organic:     'Productos Naturales',
-        residential: 'Limpieza del Hogar',
-        laundry:     'Lavandería a Domicilio',
-        eco:         'Eco-Friendly'
-      },
-
-      services: {
-        tag:               'Nuestros Servicios',
-        title1:            'Lavandería y Limpieza',
-        title2:            'Natural',
-        subtitle:          'Servicio de lavandería a domicilio y limpieza de hogares y apartamentos. Solo productos naturales.',
-        flyerHouseTitle:   'Limpieza del Hogar',
-        flyerLaundryTitle: 'Servicio de Lavandería',
-        bookCta:           '📞 Reservar Limpieza',
-        quoteCta:          '🌿 Cotización Gratis',
-        residential: {
-          title:       'Lavandería a Domicilio',
-          description: 'Recogemos tu ropa, la lavamos con jabones naturales artesanales y la entregamos fresca.',
-          feature1:    'Recogida y entrega gratis',
-          feature2:    'Lavado con productos naturales',
-          feature3:    'Aromaterapia con lavanda o sin fragancia',
-          price:       '$2.00/lb'
-        },
-        deep: {
-          badge:       'Más Popular',
-          title:       'Wash & Fold Express',
-          description: 'Ideal para estudiantes y profesionales ocupados. ¡Entrega en 24-48 horas!',
-          feature1:    'Entrega en 24-48 horas',
-          feature2:    'Doblado profesional',
-          feature3:    'Cuidado de telas delicadas',
-          price:       '$3.00/lb'
-        },
-        laundry: {
-          title:       'Limpieza del Hogar',
-          description: 'Perfecto para todas las personas ocupadas, adultos mayores y personas con necesidades especiales.',
-          feature1:    'Hogares y apartamentos',
-          feature2:    'Productos 100% naturales',
-          feature3:    'Move-in / Move-out disponible',
-          price:       'Desde $120'
-        },
-        commercial: {
-          title:       'Paquete de Suscripción',
-          description: 'Limpieza del hogar y lavandería semanal con recogida y entrega. La solución completa.',
-          feature1:    '🏠 Limpieza del hogar semanal',
-          feature2:    '🧺 3 lavadas: ropa clara, oscura y ropa de cama',
-          feature3:    '🚗 Recogida y entrega incluidas',
-          price:       'Cotización'
-        }
-      },
-
-      about: {
-        tag:          'Nuestra Historia',
-        title1:       'Arraigados en',
-        title2:       'Tradiciones Mayas',
-        founderName:  'Olga Piox',
-        founderTitle: 'Fundadora',
-        badge:        'Tradición Natural',
-        text1:        'Mi nombre es <strong>Olga Piox</strong>. Soy nativa de Guatemala con raíces indígenas mayas. PIOX & L Natural Cleaning nació después de múltiples visitas a emergencias donde descubrí que sufría reacciones alérgicas severas por años de usar químicos agresivos para limpiar.',
-        text2:        'Era tiempo de terminar con las dolorosas erupciones en la piel y reclamar la sabiduría de mis ancestros que dependían de los regalos de la Madre Naturaleza.',
-        text3:        'Así fue como llegué a depender de recetas orgánicas y fórmulas desinfectantes de mi cultura maya. Usamos estos productos en nuestros servicios de lavandería y limpieza del hogar. Nuestros clientes aman la frescura y los aromas saludables en su ropa y hogares.',
-        value1:       'Sostenibilidad',
-        value2:       'Autenticidad Cultural',
-        value3:       'Bienestar',
-        value4:       'Transparencia'
-      },
-
-      products: {
-        tag:      'Ingredientes Naturales',
-        title1:   'El Poder de la',
-        title2:   'Naturaleza',
-        subtitle: 'Lavamos tu ropa con ingredientes puros y naturales, seleccionados cuidadosamente por su efectividad y gentileza.',
-        lavender: { name: 'Lavanda',       desc: 'Aroma relajante y antibacterial' },
-        citrus:   { name: 'Cítricos',      desc: 'Elimina manchas y olores' },
-        vinegar:  { name: 'Vinagre',       desc: 'Suavizante natural' },
-        baking:   { name: 'Bicarbonato',   desc: 'Blanqueador suave' },
-        flower:   { name: 'Flor de Izote', desc: 'Tradición maya' },
-        ecoTitle: 'Cuidamos tu Ropa y el Planeta',
-        ecoText:  'Nuestros jabones artesanales son biodegradables y gentiles con las telas. Tu ropa dura más y el planeta te lo agradece.'
-      },
-
-      testimonials: {
-        tag:    'Testimonios',
-        title1: 'Lo que Dicen',
-        title2: 'Nuestros Clientes',
-        testimonial1: {
-          text:     '"¡Recomiendo mucho a Olga! La conozco a ella y a su familia desde antes de la pandemia y siempre es un placer trabajar con ella. Muy trabajadora, confiable, eficiente, flexible y con excelentes sugerencias. Limpia con productos completamente naturales. ¡Definitivamente contraten a Olga!"',
-          name:     'Tiffany P.',
-          location: 'Newton, MA'
-        },
-        testimonial2: {
-          text:     '"Olga llegó a nuestra familia no como una empresa con fines de lucro. Se presentó como alguien que quería ser parte de nuestra familia. No solo limpia; organiza y da ideas sobre cómo simplificar y mantener la casa libre de estrés. ¡La recomendamos ampliamente!"',
-          name:     'Familia Daniel',
-          location: 'Chestnut Hill, MA'
-        },
-        testimonial3: {
-          text:     '"Recuerdo un día, después de una larga jornada de trabajo, llegué a casa con gripe. En cuanto entré, sentí que mis fosas nasales se despejaron con el aroma a eucalipto de los productos de Olga. Entendí que los químicos no son buenos para nuestra salud."',
-          name:     'Ricky J.',
-          location: 'Jamaica Plain, MA'
-        },
-        testimonial4: {
-          text:     '"Olga ha sido una ayuda increíble para mí a lo largo de los años. Tiene habilidades que yo no poseo y todos estamos agradecidos por todo lo que hace por nosotros."',
-          name:     'Tricia M.',
-          location: 'Quincy, MA'
-        },
-        testimonial5: {
-          text:     '"¡Trabajar con Olga ha sido un placer! Trajo de vuelta la limpieza y el orden a nuestro hogar después de que tuve una operación muy seria. Es trabajadora, confiable y una excelente organizadora. ¡La recomendamos absolutamente!"',
-          name:     'Lisa',
-          location: 'Chestnut Hill, MA'
-        }
-      },
-
-      split: {
-        cleaning: {
-          tag:        'Limpieza de Apartamentos',
-          title:      'Apartamentos y Hogares Relucientes',
-          lead:       'Limpieza profesional con productos 100% naturales. Tu hogar quedará impecable y con aromas saludables.',
-          f1:         'Limpieza regular y profunda',
-          f2:         'Move-In / Move-Out disponible',
-          f3:         'Productos naturales usados',
-          f4:         'Cocina y baño incluidos',
-          price:      'Desde $120',
-          cta:        '📞 Reservar Limpieza',
-          badgeTitle: 'Hogares & Apartamentos',
-          badgeSub:   'Desde $120'
-        },
-        laundry: {
-          tag:   'Servicio de Lavandería',
-          title: 'Lavandería · Lavar · Secar · Doblar',
-          lead:  'Recogida y entrega conveniente. Tus prendas lavadas con jabones artesanales naturales, listas en 24-48 horas.',
-          f1:    'Lavado, secado y doblado',
-          f2:    'Recogida y entrega a domicilio',
-          f3:    'Fresca y limpia con lavanda',
-          f4:    '$2.00 por libra',
-          price: '$2.00/lb',
-          cta:   '📞 Programar Recogida'
-        },
-        eco: {
-          tag:        'Natural & Eco-Friendly',
-          title:      'Productos Seguros para tu Familia y el Planeta',
-          lead:       'Usamos recetas orgánicas y fórmulas desinfectantes de la cultura maya de Olga. Seguros para niños, mascotas y el medio ambiente.',
-          f1:         'Sin químicos agresivos',
-          f2:         'Biodegradables y sostenibles',
-          f3:         'Aromas naturales de lavanda y eucalipto',
-          save:       '¡Ahorra en tu primer servicio!',
-          cta:        '📞 Llamar o Escribir Hoy',
-          badgeTitle: 'Safe & Green',
-          badgeSub:   '100% Natural'
-        }
-      },
-
-      boston: {
-        tag:       '📍 Sirviendo al Área de Boston',
-        title:     'Limpieza Segura y Verde',
-        sub:       'Usamos productos naturales que son seguros para tu familia y el planeta.',
-        save:      '¡Ahorra en tu primer servicio. Llama o escribe hoy!',
-        callLabel: 'Llamar o Escribir:',
-        note:      'Respondemos en menos de 2 horas'
-      },
-
-      contact: {
-        tag:           'Contáctanos',
-        title1:        'Programa tu',
-        title2:        'Recogida',
-        title3:        'Hoy',
-        description:   'Agenda tu recogida de lavandería o solicita una cotización para limpieza de tu hogar. ¡Respondemos en menos de 2 horas!',
-        phoneLabel:    'Teléfono / WhatsApp',
-        emailLabel:    'Email',
-        locationLabel: 'Área de Servicio',
-        locationValue: 'Boston y alrededores',
-        form: {
-          nameLabel:          'Nombre Completo',
-          namePlaceholder:    'Tu nombre',
-          emailLabel:         'Email',
-          emailPlaceholder:   'tu@email.com',
-          phoneLabel:         'Teléfono',
-          phonePlaceholder:   '(617) 000-0000',
-          serviceLabel:       'Servicio de Interés',
-          servicePlaceholder: 'Seleccionar servicio...',
-          serviceOpt1:        'Lavandería a Domicilio',
-          serviceOpt2:        'Wash & Fold Express',
-          serviceOpt3:        'Limpieza del Hogar',
-          serviceOpt4:        'Paquete de Suscripción',
-          serviceOpt5:        'Otro',
-          messageLabel:       'Mensaje',
-          messagePlaceholder: '¿Cuántas libras aproximadamente? ¿Tienes alguna preferencia de aroma?',
-          submit:             'Enviar Solicitud'
-        }
-      },
-
-      footer: {
-        tagline:       'Cleaning Earth One Home at a Time!',
-        slogan:        'Ropa Fresca, Vida Natural',
-        servicesTitle: 'Servicios',
-        companyTitle:  'Empresa',
-        contactTitle:  'Contacto',
-        ourStory:      'Nuestra Historia',
-        ingredients:   'Ingredientes',
-        copyright:     '© 2025 PIOX & L Natural Cleaning. Todos los derechos reservados.',
-        eco:           'Eco-Friendly',
-        insured:       'Asegurado',
-        minority:      'Minority-Owned Business'
+      commercial: {
+        title: 'Paquete de suscripción',
+        description:
+          'Servicio completo semanal de limpieza y lavandería para mayor comodidad.',
+        feature1: '🏠 Limpieza semanal',
+        feature2: '🧺 Ropa clara, oscura y ropa de cama',
+        feature3: '🚗 Recogida y entrega incluidas',
+        price: 'Cotización'
       }
     },
 
-    // ─────────────────────────────────────
-    // ENGLISH
-    // ─────────────────────────────────────
-    en: {
-      nav: {
-        home:     'Home',
-        services: 'Services',
-        cleaning: 'Cleaning',
-        laundry:  'Laundry',
-        about:    'About',
-        products: 'Products',
-        contact:  'Contact'
-      },
+    about: {
+      tag: 'Nuestra historia',
+      title1: 'Inspirados en',
+      title2: 'tradiciones mayas',
+      founderName: 'Olga Piox',
+      founderTitle: 'Fundadora',
+      badge: 'Tradición natural',
+      text1:
+        'Mi nombre es <strong>Olga Piox</strong>. Soy originaria de Guatemala y tengo raíces indígenas mayas. PIOX & L Natural Cleaning nació después de múltiples visitas a emergencias, donde descubrí que sufría reacciones alérgicas severas por el uso constante de químicos agresivos.',
+      text2:
+        'Decidí dejar atrás los productos tóxicos y volver a la sabiduría natural heredada de mis ancestros.',
+      text3:
+        'Hoy utilizamos recetas orgánicas y fórmulas tradicionales mayas en nuestros servicios. Nuestros clientes aman la frescura y los aromas saludables que dejamos en su ropa y en sus hogares.',
+      value1: 'Sostenibilidad',
+      value2: 'Autenticidad cultural',
+      value3: 'Bienestar',
+      value4: 'Transparencia'
+    },
 
-      hero: {
-        title1:          'Laundry Services &',
-        titleAccent:     'Natural Cleaning',
-        tagline:         'Eco-Friendly Cleaning & Laundry Services',
-        subtitle:        'Most of us have 20–40 pounds of laundry to do each week! We\'ll pick it up, wash it using 100% natural products, and deliver your clothes fresh and clean. We also clean homes and apartments. Our area of service includes Boston\'s neighborhoods, Newton, and Cambridge.',
-        hsi1:            'Apartment Cleaning',
-        hsi2:            'Laundry Wash · Dry · Fold',
-        hsi3:            'Free Pick-Up & Delivery',
-        startingAt:      'Starting at $120',
-        cta1:            '📞 Call or Text',
-        cta2:            'View Services',
-        scrollIndicator: 'Discover more',
-        offerEyebrow:    'Special Offer',
-        offerUnit:       'Bags of Laundry',
-        offerOnly:       'Only',
-        offerDelivery:   'with Delivery!',
-        card1Title:      'House Cleaning',
-        card1f1:         'Regular & Deep Cleaning',
-        card1f2:         'Move-In / Move-Out',
-        card1f3:         'Natural Products Used',
-        card1Price:      'Starting at $120',
-        card2Title:      'Wash & Fold Express',
-        card2f1:         '24-48 hour delivery',
-        card2f2:         'Professional folding',
-        card2f3:         'Delicate fabrics OK',
-        card2Price:      '$3.00/lb',
-        promo:           '🎉 20% OFF YOUR FIRST CLEAN or LAUNDRY ORDER!',
-        promoCta:        'Claim Offer',
-        quoteBar:        'Call or Text for a Free Quote!'
+    products: {
+      tag: 'Ingredientes naturales',
+      title1: 'El poder de la',
+      title2: 'naturaleza',
+      subtitle:
+        'Lavamos tu ropa con ingredientes naturales seleccionados cuidadosamente por su efectividad y suavidad.',
+      lavender: {
+        name: 'Lavanda',
+        desc: 'Aroma relajante y propiedades antibacteriales'
       },
-
-      trust: {
-        insured:      'Fully Insured',
-        eco:          'Eco-Friendly',
-        satisfaction: 'Satisfaction Guaranteed',
-        minority:     'Minority-Owned Business'
+      citrus: {
+        name: 'Cítricos',
+        desc: 'Ayudan a eliminar manchas y olores'
       },
-
-      features: {
-        organic:     'Natural Products',
-        residential: 'Home Cleaning',
-        laundry:     'Laundry Delivery',
-        eco:         'Eco-Friendly'
+      vinegar: {
+        name: 'Vinagre',
+        desc: 'Suavizante natural para las telas'
       },
-
-      services: {
-        tag:               'Our Services',
-        title1:            'Laundry & Cleaning',
-        title2:            'Naturally',
-        subtitle:          'Laundry pickup & delivery and home/apartment cleaning. Only natural products that care for your clothes, your health, and the environment.',
-        flyerHouseTitle:   'House Cleaning',
-        flyerLaundryTitle: 'Laundry Service',
-        bookCta:           '📞 Book a Cleaning',
-        quoteCta:          '🌿 Get a Free Quote',
-        residential: {
-          title:       'Laundry Pickup & Delivery',
-          description: 'We pick up your clothes, wash them with handcrafted natural soaps, and deliver them fresh.',
-          feature1:    'Free pickup & delivery',
-          feature2:    'Washed with natural products',
-          feature3:    'Lavender aromatherapy or unscented options',
-          price:       '$2.00/lb'
-        },
-        deep: {
-          badge:       'Most Popular',
-          title:       'Wash & Fold Express',
-          description: 'Ideal for busy students and professionals. Delivery in 24-48 hours!',
-          feature1:    '24-48 hour delivery',
-          feature2:    'Professional folding',
-          feature3:    'Delicate fabric care',
-          price:       '$3.00/lb'
-        },
-        laundry: {
-          title:       'Home Cleaning',
-          description: 'Perfect for all busy individuals, older adults, and persons with special needs.',
-          feature1:    'Homes & apartments',
-          feature2:    '100% natural products',
-          feature3:    'Move-in / Move-out available',
-          price:       'From $120'
-        },
-        commercial: {
-          title:       'Subscription Package',
-          description: 'Professional home cleaning and weekly laundry pickup, wash, dry, fold & delivery. The complete care package.',
-          feature1:    '🏠 Weekly home cleaning',
-          feature2:    '🧺 3 loads: lights, darks & linens',
-          feature3:    '🚗 Pickup & delivery included',
-          price:       'Get Quote'
-        }
+      baking: {
+        name: 'Bicarbonato',
+        desc: 'Blanqueador suave y desodorizante'
       },
-
-      about: {
-        tag:          'Our Story',
-        title1:       'Rooted in',
-        title2:       'Mayan Traditions',
-        founderName:  'Olga Piox',
-        founderTitle: 'Founder',
-        badge:        'Natural Tradition',
-        text1:        'My name is <strong>Olga Piox</strong>. I am a native of Guatemala with indigenous Mayan roots. PIOX & L Natural Cleaning was born after multiple emergency room visits where I discovered I was suffering severe allergic reactions from years of using harsh chemicals for cleaning.',
-        text2:        'It was time to end the painful skin eruptions and reclaim the wisdom of my ancestors who relied on Mother Nature\'s gifts.',
-        text3:        'This is how I came to rely on organic recipes and disinfectant formulas from my Mayan culture. We use these products in our laundry and home cleaning services. Our clients love the freshness and healthy aromas in their clothes and homes.',
-        value1:       'Sustainability',
-        value2:       'Cultural Authenticity',
-        value3:       'Wellbeing',
-        value4:       'Transparency'
+      flower: {
+        name: 'Flor de izote',
+        desc: 'Ingrediente ligado a la tradición maya'
       },
+      ecoTitle: 'Cuidamos tu ropa y el planeta',
+      ecoText:
+        'Nuestros productos son biodegradables, seguros para las telas y amables con el medio ambiente.'
+    },
 
-      products: {
-        tag:      'Natural Ingredients',
-        title1:   'The Power of',
-        title2:   'Nature',
-        subtitle: 'We wash your clothes with pure and natural ingredients, carefully selected for their effectiveness and gentleness.',
-        lavender: { name: 'Lavender',     desc: 'Relaxing scent and antibacterial' },
-        citrus:   { name: 'Citrus',       desc: 'Removes stains and odors' },
-        vinegar:  { name: 'Vinegar',      desc: 'Natural fabric softener' },
-        baking:   { name: 'Baking Soda',  desc: 'Gentle whitener' },
-        flower:   { name: 'Izote Flower', desc: 'Mayan tradition' },
-        ecoTitle: 'We Care for Your Clothes & the Planet',
-        ecoText:  'Our handcrafted soaps are biodegradable and gentle on fabrics. Your clothes last longer and the planet thanks you.'
+    testimonials: {
+      tag: 'Testimonios',
+      title1: 'Lo que dicen',
+      title2: 'nuestros clientes',
+      testimonial1: {
+        text:
+          '"Recomiendo muchísimo a Olga. Es muy trabajadora, confiable, eficiente y siempre usa productos naturales. Ha sido un placer trabajar con ella."',
+        name: 'Tiffany P.',
+        location: 'Newton, MA'
       },
-
-      testimonials: {
-        tag:    'Testimonials',
-        title1: 'What Our',
-        title2: 'Clients Say',
-        testimonial1: {
-          text:     '"Highly recommend Olga! I\'ve known her and her family since before the pandemic and she is always great to work with. Very hard working, trustworthy, efficient, flexible and has great suggestions. She cleans using all natural products. Definitely hire Olga!"',
-          name:     'Tiffany P.',
-          location: 'Newton, MA'
-        },
-        testimonial2: {
-          text:     '"Olga came to our family not as a profit-making company. She presented herself as someone who wants to be a member of our family. She doesn\'t just clean; she organizes and gives ideas on how to simplify and keep our house stress free. We highly recommend her!"',
-          name:     'Daniel\'s Family',
-          location: 'Chestnut Hill, MA'
-        },
-        testimonial3: {
-          text:     '"I remember one day after a long day at the office, I came home sick with the flu. As soon as I entered, I felt my nasal passages clear from the eucalyptus scent of Olga\'s products. I understood then that chemicals aren\'t good for our health. I highly recommend her!"',
-          name:     'Ricky J.',
-          location: 'Jamaica Plain, MA'
-        },
-        testimonial4: {
-          text:     '"Olga has been an amazing help to me over the years. She has skills that I do not possess and we are all grateful for all she does for us."',
-          name:     'Tricia M.',
-          location: 'Quincy, MA'
-        },
-        testimonial5: {
-          text:     '"Working with Olga has been a delight! She really brought cleanliness and order back to our home after I had a very serious operation. She is hard-working, reliable, and an excellent organizer. We would absolutely recommend her."',
-          name:     'Lisa',
-          location: 'Chestnut Hill, MA'
-        }
+      testimonial2: {
+        text:
+          '"Olga no solo limpia; también organiza y aporta ideas para mantener el hogar en armonía. La recomendamos ampliamente."',
+        name: 'Familia Daniel',
+        location: 'Chestnut Hill, MA'
       },
-
-      split: {
-        cleaning: {
-          tag:        'Apartment Cleaning',
-          title:      'Sparkling Clean Apartments & Homes',
-          lead:       'Professional cleaning with 100% natural products. Your home will be spotless with healthy aromas.',
-          f1:         'Regular & Deep Cleaning',
-          f2:         'Move-In / Move-Out Cleaning',
-          f3:         'Natural Products Used',
-          f4:         'Kitchen & bathroom included',
-          price:      'Starting at $120',
-          cta:        '📞 Book a Cleaning',
-          badgeTitle: 'Homes & Apartments',
-          badgeSub:   'Starting at $120'
-        },
-        laundry: {
-          tag:   'Laundry Service',
-          title: 'Laundry Wash · Dry · Fold',
-          lead:  'Convenient pick-up and delivery. Your clothes washed with handcrafted natural soaps, ready in 24-48 hours.',
-          f1:    'Wash · Dry · Fold',
-          f2:    'Pick-Up & Delivery',
-          f3:    'Fresh & Clean with lavender',
-          f4:    '$2.00 per pound',
-          price: '$2.00/lb',
-          cta:   '📞 Schedule Pickup'
-        },
-        eco: {
-          tag:        'Natural & Eco-Friendly',
-          title:      'Safe & Green Cleaning for Your Family',
-          lead:       'We use organic recipes and disinfectant formulas rooted in Olga\'s Mayan culture. Safe for kids, pets, and the environment.',
-          f1:         'No harsh chemicals',
-          f2:         'Biodegradable & sustainable',
-          f3:         'Natural lavender & eucalyptus aromas',
-          save:       'Save on your first service!',
-          cta:        '📞 Call or Text Today',
-          badgeTitle: 'Safe & Green',
-          badgeSub:   '100% Natural'
-        }
+      testimonial3: {
+        text:
+          '"El aroma natural de sus productos hace una gran diferencia. Desde que ella limpia mi casa, siento un ambiente más fresco y saludable."',
+        name: 'Ricky J.',
+        location: 'Jamaica Plain, MA'
       },
-
-      boston: {
-        tag:       '📍 Serving the Boston Area',
-        title:     'Safe & Green Cleaning',
-        sub:       'We use natural products that are safe for your family and the planet.',
-        save:      'Save on your first service. Call or text today!',
-        callLabel: 'Call or Text:',
-        note:      'We respond in less than 2 hours'
+      testimonial4: {
+        text:
+          '"Olga ha sido una ayuda increíble para mí y mi familia durante años. Estamos muy agradecidos por todo lo que hace."',
+        name: 'Tricia M.',
+        location: 'Quincy, MA'
       },
-
-      contact: {
-        tag:           'Contact Us',
-        title1:        'Schedule Your',
-        title2:        'Pickup',
-        title3:        'Today',
-        description:   'Schedule your laundry pickup or request a quote for home/apartment cleaning. We respond in less than 2 hours!',
-        phoneLabel:    'Phone / WhatsApp',
-        emailLabel:    'Email',
-        locationLabel: 'Service Area',
-        locationValue: 'Boston and surrounding areas',
-        form: {
-          nameLabel:          'Full Name',
-          namePlaceholder:    'Your name',
-          emailLabel:         'Email',
-          emailPlaceholder:   'you@email.com',
-          phoneLabel:         'Phone',
-          phonePlaceholder:   '(617) 000-0000',
-          serviceLabel:       'Service of Interest',
-          servicePlaceholder: 'Select service...',
-          serviceOpt1:        'Laundry Pickup & Delivery',
-          serviceOpt2:        'Wash & Fold Express',
-          serviceOpt3:        'Home Cleaning',
-          serviceOpt4:        'Subscription Package',
-          serviceOpt5:        'Other',
-          messageLabel:       'Message',
-          messagePlaceholder: 'Approximately how many pounds? Any scent preferences?',
-          submit:             'Send Request'
-        }
-      },
-
-      footer: {
-        tagline:       'Cleaning Earth One Home at a Time!',
-        slogan:        'Fresh Clothes, Natural Life',
-        servicesTitle: 'Services',
-        companyTitle:  'Company',
-        contactTitle:  'Contact',
-        ourStory:      'Our Story',
-        ingredients:   'Ingredients',
-        copyright:     '© 2025 PIOX & L Natural Cleaning. All rights reserved.',
-        eco:           'Eco-Friendly',
-        insured:       'Insured',
-        minority:      'Minority-Owned Business'
+      testimonial5: {
+        text:
+          '"Trabajar con Olga ha sido una experiencia excelente. Es responsable, organizada y dejó nuestro hogar impecable en un momento muy importante para nosotros."',
+        name: 'Lisa',
+        location: 'Chestnut Hill, MA'
       }
+    },
+
+    split: {
+      cleaning: {
+        tag: 'Limpieza de apartamentos',
+        title: 'Apartamentos y hogares impecables',
+        lead:
+          'Limpieza profesional con productos 100% naturales para un hogar fresco, saludable y reluciente.',
+        f1: 'Limpieza regular y profunda',
+        f2: 'Servicio Move-In / Move-Out',
+        f3: 'Productos naturales y seguros',
+        f4: 'Cocina y baño incluidos',
+        price: 'Desde $120',
+        cta: '📞 Programar limpieza',
+        badgeTitle: 'Hogares y apartamentos',
+        badgeSub: 'Desde $120'
+      },
+      laundry: {
+        tag: 'Servicio de lavandería',
+        title: 'Lavado · Secado · Doblado',
+        lead:
+          'Servicio conveniente de recogida y entrega. Tu ropa vuelve limpia, fresca y lista para usar.',
+        f1: 'Lavado, secado y doblado',
+        f2: 'Recogida y entrega a domicilio',
+        f3: 'Opciones con fragancia natural o sin fragancia',
+        f4: '$2.00 por libra',
+        price: '$2.00/lb',
+        cta: '📞 Programar recogida'
+      },
+      eco: {
+        tag: 'Natural y ecológico',
+        title: 'Productos seguros para tu familia y el planeta',
+        lead:
+          'Usamos recetas orgánicas e inspiración de la tradición maya de Olga para ofrecer una limpieza efectiva y saludable.',
+        f1: 'Sin químicos agresivos',
+        f2: 'Biodegradables y sostenibles',
+        f3: 'Aromas naturales de lavanda y eucalipto',
+        save: '¡Ahorra en tu primer servicio!',
+        cta: '📞 Llamar o escribir hoy',
+        badgeTitle: 'Seguro y ecológico',
+        badgeSub: '100% natural'
+      }
+    },
+
+    boston: {
+      tag: '📍 Atendiendo el área de Boston',
+      title: 'Limpieza segura y ecológica',
+      sub:
+        'Usamos productos naturales que son seguros para tu familia, tus mascotas y el planeta.',
+      save: 'Ahorra en tu primer servicio. ¡Llama o escribe hoy!',
+      callLabel: 'Llamar o escribir:',
+      note: 'Respondemos en menos de 2 horas'
+    },
+
+    contact: {
+      tag: 'Contáctanos',
+      title1: 'Programa tu',
+      title2: 'servicio',
+      title3: 'hoy',
+      description:
+        'Agenda tu servicio de lavandería o solicita una cotización de limpieza. Normalmente respondemos en menos de 2 horas.',
+      phoneLabel: 'Teléfono / WhatsApp',
+      emailLabel: 'Correo electrónico',
+      locationLabel: 'Área de servicio',
+      locationValue: 'Boston y alrededores',
+      form: {
+        nameLabel: 'Nombre completo',
+        namePlaceholder: 'Tu nombre',
+        emailLabel: 'Correo electrónico',
+        emailPlaceholder: 'tu@email.com',
+        phoneLabel: 'Teléfono',
+        phonePlaceholder: '(617) 000-0000',
+        serviceLabel: 'Servicio',
+        servicePlaceholder: 'Seleccionar...',
+        serviceOpt1: 'Lavandería',
+        serviceOpt2: 'Wash & Fold Express',
+        serviceOpt3: 'Limpieza residencial',
+        serviceOpt4: 'Suscripción',
+        serviceOpt5: 'Otro',
+        messageLabel: 'Mensaje',
+        messagePlaceholder: '¿Cuántas libras aproximadamente?',
+        submit: 'Enviar solicitud'
+      }
+    },
+
+    footer: {
+      tagline: 'Limpiando el planeta, un hogar a la vez',
+      slogan: 'Ropa fresca, vida natural',
+      servicesTitle: 'Servicios',
+      companyTitle: 'Empresa',
+      contactTitle: 'Contacto',
+      ourStory: 'Nuestra historia',
+      ingredients: 'Ingredientes',
+      copyright: '© 2026 PIOX & L Natural Cleaning',
+      eco: 'Eco-friendly',
+      insured: 'Asegurado',
+      minority: 'Minority-Owned Business'
     }
-  };
+  },
+
+  en: {
+    nav: {
+      home: 'Home',
+      services: 'Services',
+      cleaning: 'Cleaning',
+      laundry: 'Laundry',
+      about: 'About',
+      products: 'Products',
+      contact: 'Contact'
+    },
+
+    hero: {
+      title1: 'Laundry Services &',
+      titleAccent: 'Natural Cleaning',
+      tagline: 'Eco-friendly cleaning and laundry services',
+      subtitle:
+        'Most households generate 20–40 pounds of laundry every week. We pick it up, wash it using 100% natural products, and deliver it fresh and perfectly clean. We also provide professional home and apartment cleaning services throughout Boston, Newton, and Cambridge.',
+      hsi1: 'Apartment Cleaning',
+      hsi2: 'Wash · Dry · Fold',
+      hsi3: 'Free Pickup & Delivery',
+      startingAt: 'Starting at $120',
+      cta1: '📞 Contact us',
+      cta2: 'View Services',
+      scrollIndicator: 'Discover more',
+      offerEyebrow: 'Special Offer',
+      offerUnit: 'Laundry Bags',
+      offerOnly: 'Only',
+      offerDelivery: 'Delivery Included',
+      card1Title: 'Home Cleaning',
+      card1f1: 'Regular & Deep Cleaning',
+      card1f2: 'Move-In / Move-Out',
+      card1f3: 'Natural Products Used',
+      card1Price: 'Starting at $120',
+      card2Title: 'Wash & Fold Express',
+      card2f1: '24 to 48 hour turnaround',
+      card2f2: 'Professional folding',
+      card2f3: 'Safe for delicate fabrics',
+      card2Price: '$3.00/lb',
+      promo: '🎉 20% OFF your first service!',
+      promoCta: 'Claim Offer',
+      quoteBar: 'Call or Text for a Free Quote!'
+    },
+
+    trust: {
+      insured: 'Fully insured',
+      eco: 'Eco-friendly products',
+      satisfaction: 'Satisfaction guaranteed',
+      minority: 'Certified Minority-Owned Business'
+    },
+
+    features: {
+      organic: 'Natural products',
+      residential: 'Residential cleaning',
+      laundry: 'Laundry delivery',
+      eco: 'Eco-friendly'
+    },
+
+    services: {
+      tag: 'Our services',
+      title1: 'Laundry & cleaning',
+      title2: 'naturally',
+      subtitle:
+        'Professional laundry pickup and delivery plus residential cleaning using only natural products.',
+      flyerHouseTitle: 'Home Cleaning',
+      flyerLaundryTitle: 'Laundry Service',
+      bookCta: '📞 Schedule Cleaning',
+      quoteCta: '🌿 Get a Free Quote',
+
+      residential: {
+        title: 'Residential Cleaning',
+        description:
+          'Professional cleaning for homes and apartments using safe, natural products.',
+        feature1: 'Regular & deep cleaning',
+        feature2: 'Move-in / Move-out',
+        feature3: '100% natural products',
+        price: 'Starting at $120'
+      },
+
+      deep: {
+        badge: 'Most popular',
+        title: 'Wash & Fold Express',
+        description:
+          'Perfect for busy professionals and students who need fast turnaround service.',
+        feature1: '24 to 48 hour delivery',
+        feature2: 'Professional folding',
+        feature3: 'Delicate fabric care',
+        price: '$3.00/lb'
+      },
+
+      laundry: {
+        title: 'Laundry Pickup & Delivery',
+        description:
+          'We pick up your laundry, wash it with natural soaps, and deliver it back fresh and clean.',
+        feature1: 'Free pickup & delivery',
+        feature2: 'Washed with natural detergents',
+        feature3: 'Scented or fragrance-free options',
+        price: '$2.00/lb'
+      },
+
+      commercial: {
+        title: 'Subscription Package',
+        description:
+          'A convenient weekly solution that combines home cleaning and laundry service.',
+        feature1: '🏠 Weekly cleaning',
+        feature2: '🧺 Lights, darks & linens',
+        feature3: '🚗 Pickup & delivery included',
+        price: 'Request a Quote'
+      }
+    },
+
+    about: {
+      tag: 'Our Story',
+      title1: 'Inspired by',
+      title2: 'Mayan traditions',
+      founderName: 'Olga Piox',
+      founderTitle: 'Founder',
+      badge: 'Natural tradition',
+      text1:
+        'My name is <strong>Olga Piox</strong>. I am originally from Guatemala and have indigenous Mayan roots. PIOX & L Natural Cleaning was born after multiple emergency room visits, where I discovered I was suffering severe allergic reactions from years of using harsh chemicals.',
+      text2:
+        'I decided to leave toxic products behind and return to the natural wisdom passed down by my ancestors.',
+      text3:
+        'Today, we use organic recipes and traditional Mayan-inspired formulas in our services. Our clients love the freshness and healthy aromas left in their clothes and homes.',
+      value1: 'Sustainability',
+      value2: 'Cultural authenticity',
+      value3: 'Wellbeing',
+      value4: 'Transparency'
+    },
+
+    products: {
+      tag: 'Natural Ingredients',
+      title1: 'The power of',
+      title2: 'nature',
+      subtitle:
+        'We wash your clothes with natural ingredients carefully selected for their effectiveness and gentleness.',
+      lavender: {
+        name: 'Lavender',
+        desc: 'Relaxing scent with antibacterial properties'
+      },
+      citrus: {
+        name: 'Citrus',
+        desc: 'Helps remove stains and odors'
+      },
+      vinegar: {
+        name: 'Vinegar',
+        desc: 'A natural fabric softener'
+      },
+      baking: {
+        name: 'Baking Soda',
+        desc: 'A gentle whitener and deodorizer'
+      },
+      flower: {
+        name: 'Izote Flower',
+        desc: 'Rooted in Mayan tradition'
+      },
+      ecoTitle: 'We care for your clothes and the planet',
+      ecoText:
+        'Our products are biodegradable, fabric-safe, and environmentally friendly.'
+    },
+
+    testimonials: {
+      tag: 'Testimonials',
+      title1: 'What',
+      title2: 'our clients say',
+      testimonial1: {
+        text:
+          '"I highly recommend Olga. She is hardworking, trustworthy, efficient, and always uses natural products. It has been a pleasure working with her."',
+        name: 'Tiffany P.',
+        location: 'Newton, MA'
+      },
+      testimonial2: {
+        text:
+          '"Olga does more than clean. She helps organize and brings thoughtful ideas to keep the home calm and stress-free. We highly recommend her."',
+        name: "Daniel's Family",
+        location: 'Chestnut Hill, MA'
+      },
+      testimonial3: {
+        text:
+          '"The natural scent of her products makes such a difference. Since she started cleaning my home, everything feels fresher and healthier."',
+        name: 'Ricky J.',
+        location: 'Jamaica Plain, MA'
+      },
+      testimonial4: {
+        text:
+          '"Olga has been an incredible help to me and my family over the years. We are truly grateful for everything she does."',
+        name: 'Tricia M.',
+        location: 'Quincy, MA'
+      },
+      testimonial5: {
+        text:
+          '"Working with Olga has been wonderful. She is reliable, organized, and brought our home back to order during an important time in our lives."',
+        name: 'Lisa',
+        location: 'Chestnut Hill, MA'
+      }
+    },
+
+    split: {
+      cleaning: {
+        tag: 'Apartment Cleaning',
+        title: 'Sparkling clean apartments and homes',
+        lead:
+          'Professional cleaning with 100% natural products for a fresh, healthy, and spotless home.',
+        f1: 'Regular & deep cleaning',
+        f2: 'Move-In / Move-Out service',
+        f3: 'Safe natural products',
+        f4: 'Kitchen and bathroom included',
+        price: 'Starting at $120',
+        cta: '📞 Schedule Cleaning',
+        badgeTitle: 'Homes & Apartments',
+        badgeSub: 'Starting at $120'
+      },
+      laundry: {
+        tag: 'Laundry Service',
+        title: 'Wash · Dry · Fold',
+        lead:
+          'Convenient pickup and delivery service. Your laundry comes back clean, fresh, and ready to wear.',
+        f1: 'Wash, dry & fold',
+        f2: 'Pickup & delivery',
+        f3: 'Scented or fragrance-free options',
+        f4: '$2.00 per pound',
+        price: '$2.00/lb',
+        cta: '📞 Schedule Pickup'
+      },
+      eco: {
+        tag: 'Natural & Eco-Friendly',
+        title: 'Safe products for your family and the planet',
+        lead:
+          'We use organic recipes and Mayan-inspired traditions from Olga’s heritage to deliver effective, healthy cleaning.',
+        f1: 'No harsh chemicals',
+        f2: 'Biodegradable & sustainable',
+        f3: 'Natural lavender and eucalyptus aromas',
+        save: 'Save on your first service!',
+        cta: '📞 Call or Text Today',
+        badgeTitle: 'Safe & Green',
+        badgeSub: '100% Natural'
+      }
+    },
+
+    boston: {
+      tag: '📍 Serving the Boston Area',
+      title: 'Safe and eco-friendly cleaning',
+      sub:
+        'We use natural products that are safe for your family, your pets, and the planet.',
+      save: 'Save on your first service. Call or text today!',
+      callLabel: 'Call or Text:',
+      note: 'We respond in less than 2 hours'
+    },
+
+    contact: {
+      tag: 'Contact us',
+      title1: 'Schedule your',
+      title2: 'service',
+      title3: 'today',
+      description:
+        'Schedule your laundry service or request a cleaning quote. We usually respond within 2 hours.',
+      phoneLabel: 'Phone / WhatsApp',
+      emailLabel: 'Email',
+      locationLabel: 'Service Area',
+      locationValue: 'Boston and surrounding areas',
+      form: {
+        nameLabel: 'Full name',
+        namePlaceholder: 'Your name',
+        emailLabel: 'Email',
+        emailPlaceholder: 'you@email.com',
+        phoneLabel: 'Phone',
+        phonePlaceholder: '(617) 000-0000',
+        serviceLabel: 'Service',
+        servicePlaceholder: 'Select...',
+        serviceOpt1: 'Laundry Service',
+        serviceOpt2: 'Wash & Fold Express',
+        serviceOpt3: 'Residential Cleaning',
+        serviceOpt4: 'Subscription',
+        serviceOpt5: 'Other',
+        messageLabel: 'Message',
+        messagePlaceholder: 'Approximate weight?',
+        submit: 'Send Request'
+      }
+    },
+
+    footer: {
+      tagline: 'Cleaning Earth One Home at a Time',
+      slogan: 'Fresh clothes, naturally clean living',
+      servicesTitle: 'Services',
+      companyTitle: 'Company',
+      contactTitle: 'Contact',
+      ourStory: 'Our Story',
+      ingredients: 'Ingredients',
+      copyright: '© 2026 PIOX & L Natural Cleaning',
+      eco: 'Eco-friendly',
+      insured: 'Insured',
+      minority: 'Minority-Owned Business'
+    }
+  }
+};
 
   get t(): Translations {
     return this.translations[this.currentLang];
