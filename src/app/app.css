@@ -102,7 +102,7 @@ ul { list-style: none; }
    =================================== */
 .navbar {
   position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
-  padding: .5rem 0; transition: all .4s ease;
+  padding:  0; transition: all .4s ease;
   background: rgba(255,251,245,.95); backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(124,58,237,.08);
 }
@@ -124,8 +124,8 @@ ul { list-style: none; }
 
 /* Logo */
 .logo { display: flex; align-items: center; text-decoration: none; }
-.logo-img { height: 80px; width: auto; object-fit: contain; display: block; }
-.logo-img--footer { height: 80px; background: rgba(255,255,255,0.92); border-radius: 10px; padding: 6px 10px; }
+.logo-img { height: 100px; width: auto; object-fit: contain; display: block; }
+.logo-img--footer { height: 90px; background: rgba(255,255,255,0.92); border-radius: 10px; padding: 6px 10px; }
 
 /* Nav links */
 .nav-links { display: flex; align-items: center; gap: 2.5rem; }
