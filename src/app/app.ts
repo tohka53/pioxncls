@@ -216,6 +216,41 @@ export class App {
   menuOpen = false;
   currentLang: Language = 'en';
 
+  // ── FormSubmit state ──────────────────────────
+  formSubmitting = false;
+  formSent       = false;
+  formError      = false;
+
+  async onSubmit(event: Event): Promise<void> {
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+
+    this.formSubmitting = true;
+    this.formError      = false;
+
+    try {
+      const data = new FormData(form);
+
+      const response = await fetch('https://formsubmit.co/ajax/pioxnaturalcleaning@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      });
+
+      if (response.ok) {
+        this.formSent = true;
+        form.reset();
+      } else {
+        this.formError = true;
+      }
+    } catch {
+      this.formError = true;
+    } finally {
+      this.formSubmitting = false;
+    }
+  }
+  // ─────────────────────────────────────────────
+
 translations: Record<Language, Translations> = {
   es: {
     nav: {
@@ -738,7 +773,7 @@ translations: Record<Language, Translations> = {
         tag: 'Natural & Eco-Friendly',
         title: 'Safe products for your family and the planet',
         lead:
-          'We use organic recipes and Mayan-inspired traditions from Olga’s heritage to deliver effective, healthy cleaning.',
+          'We use organic recipes and Mayan-inspired traditions from Olga\'s heritage to deliver effective, healthy cleaning.',
         f1: 'No harsh chemicals',
         f2: 'Biodegradable & sustainable',
         f3: 'Natural lavender and eucalyptus aromas',
